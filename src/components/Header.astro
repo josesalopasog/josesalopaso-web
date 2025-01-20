@@ -1,0 +1,95 @@
+---
+import jslogo from "../assets/logo-JS_Tech(white-transparent).png"
+import "@fontsource/onest/400.css"
+---
+
+<header class="grid grid-cols-[auto,auto,auto] gap-2 bg-black/20 bg-blur">
+    <img class="w-[80px] h-[80px] mx-10 col-start-1 flex justify-end" src={jslogo.src} alt="JS-logo" />
+    <nav class="col-start-2 flex text-2xl font-semibold justify-center items-center">
+        <ul class="flex gap-x-4">
+            <li><a href="#about-me">Sobre mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#education">Educación</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="col-start-3 button-container">
+        <span class="material-symbols-outlined">
+            language
+        </span>
+        <span>:</span>
+        <input type="checkbox" id="lang-checkbox" class="lang-checkbox">
+        <label for="lang-checkbox" id="language-switcher" class="language-button"></label>
+    </div>
+
+</header>
+
+<style>
+    /*---Botón de lenguaje---*/
+    .button-container{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        padding: 5px;
+        margin: 2px 10px 2px 10px;
+    }
+
+    .language-button{
+        background-size: cover;
+        background-position: center;
+        width: 60px;
+        height: 30px;
+        background-color: black;
+        border-radius: 75px;
+        cursor:pointer;
+        position: relative;
+        transition: 0.2s ;
+        margin: 5px;
+    }
+
+    .language-button::before{
+        background-size: cover;
+        background-position: center;
+        background-image: url("../assets/co.svg");
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 25px;
+        border-radius: 75px;
+        margin: 2.5px;
+    }
+    .lang-checkbox:not(:checked) + .language-button::before{
+        transition: 0.2s;
+    }
+    .lang-checkbox:checked + .language-button::before{
+        transition: 0.2s;
+        transform: translateX(29px);
+        background-image: url("../assets/um.svg");
+    }
+    .lang-checkbox{
+        display: none;
+    }
+    /*-----------------*/
+
+    /*---Barra Navegación---*/
+
+    li a:link, a:visited {
+        font-family:"Cal Sans SemiBold";
+        font-size: 20px;
+        padding: 15px 15px;
+        text-decoration: none;
+        transition: 0.8s ease;
+    }
+
+    li a:hover, a:active {
+        color: transparent;
+        background: var(--gradient-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: 0.8s ease;
+    }
+    /*------Mobile------*/
+</style>
