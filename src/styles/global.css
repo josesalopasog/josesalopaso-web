@@ -152,4 +152,8 @@ section h2:hover {
         margin: 0 auto 50px;
         width: 90%;
     }
+
+    .swiper {
+      width: 100%;
+    }
   }

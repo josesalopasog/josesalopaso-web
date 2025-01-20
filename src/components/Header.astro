@@ -1,5 +1,6 @@
 ---
-import jslogo from "../assets/logo-JS_Tech(white-transparent).png"
+import { LanguageIcon } from "@heroicons/react/16/solid"
+import jslogo from "../assets/images/logo-JS_Tech(white-transparent).png"
 import "@fontsource/onest/400.css"
 ---
 
@@ -39,7 +40,7 @@ import "@fontsource/onest/400.css"
     .language-button::before{
         background-size: cover;
         background-position: center;
-        background-image: url("../assets/co.svg");
+        background-image: url("../assets/svg/co.svg");
         position: absolute;
         content: '';
         width: 25px;
@@ -53,7 +54,7 @@ import "@fontsource/onest/400.css"
     .lang-checkbox:checked + .language-button::before{
         transition: 0.2s;
         transform: translateX(29px);
-        background-image: url("../assets/um.svg");
+        background-image: url("../assets/svg/um.svg");
     }
     .lang-checkbox{
         display: none;
