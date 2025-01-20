@@ -1,13 +1,30 @@
+---
+import myicon from '../assets/my-icon.webp'
+---
 
 <section >
     <div class="section-container">
         <h2 data-lang="titleAboutMe">About Me</h2>
-        <p data-lang="textAboutMe" class="text-left p-5">
-            I am a software developer focused on
-            data analysis, data science, machine learning, frontend and
-            backend development. With the skills I have learned, my job is to
-            help companies to improve ther data analysis and visualization in
-            web enviroments.
-        </p>
+        <div class="about-me flex justify-center items-center">
+            <img class="w-[250px] h-[250px]" src={myicon.src} alt="my-icon"  />
+            <p data-lang="textAboutMe" class="text-left p-5">
+                I am a software developer focused on
+                data analysis, data science, machine learning, frontend and
+                backend development. With the skills I have learned, my job is to
+                help companies to improve ther data analysis and visualization in
+                web enviroments.
+            </p>
+        </div>
     </div>    
 </section>
+
+<style>
+    @media (max-width: 900px){
+        .about-me{
+            flex-direction: column;
+        }
+        .about-me p{
+            text-align: center;
+        }
+    }
+</style>

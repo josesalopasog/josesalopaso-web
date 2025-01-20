@@ -15,11 +15,7 @@ import "@fontsource/onest/400.css"
         </ul>
     </nav>
 
-    <div class="col-start-3 button-container">
-        <span class="material-symbols-outlined">
-            language
-        </span>
-        <span>:</span>
+    <div class="col-start-3 button-container flex justify-center items-center">
         <input type="checkbox" id="lang-checkbox" class="lang-checkbox">
         <label for="lang-checkbox" id="language-switcher" class="language-button"></label>
     </div>
@@ -28,15 +24,6 @@ import "@fontsource/onest/400.css"
 
 <style>
     /*---Botón de lenguaje---*/
-    .button-container{
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 100px;
-        padding: 5px;
-        margin: 2px 10px 2px 10px;
-    }
-
     .language-button{
         background-size: cover;
         background-position: center;
@@ -47,7 +34,6 @@ import "@fontsource/onest/400.css"
         cursor:pointer;
         position: relative;
         transition: 0.2s ;
-        margin: 5px;
     }
 
     .language-button::before{
