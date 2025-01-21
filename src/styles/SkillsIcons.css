@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skill-icon {
+    @apply 
+        flex 
+        flex-col 
+        items-center 
+        justify-center 
+        gap-1
+        px-1 
+        py-[2px] 
+        m-0 
+        rounded-lg 
+        transition-transform 
+        duration-300 
+        hover:scale-110 
+}
+
+.skill-icon p{
+  margin: 0;
+  padding: 0px 5px;
+  font-size: 14px; 
+}
+
+.skill-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1); /* hover:scale-110 */
+}

@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tech-icon {
+    @apply 
+        flex 
+        flex-row 
+        items-center 
+        justify-center 
+        px-1 
+        py-[2px] 
+        m-0 
+        rounded-lg 
+        transition-transform 
+        duration-300 
+        hover:scale-110 
+}
+
+.tech-icon p{
+  margin: 0;
+  padding: 0px 5px;
+  font-size: 10px; 
+}
+
+.tech-icon img {
+  width: 12px;
+  height: 12px;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1); /* hover:scale-110 */
+}
