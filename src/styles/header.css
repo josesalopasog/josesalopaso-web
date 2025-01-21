@@ -1,6 +1,6 @@
 header {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 20% 1fr 20%;
     position: sticky;
     justify-content: space-between;
     top: 0;

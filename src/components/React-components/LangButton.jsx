@@ -3,7 +3,7 @@ import { LanguageIcon } from "@heroicons/react/16/solid"
 
 const LangButton = () => {
     return ( 
-        <div class="button-container w-full flex justify-center items-center gap-1">
+        <div class="button-container flex justify-center items-center gap-1">
             <LanguageIcon class="w-4"/>
             <p className="text-sm">:</p>
             <input type="checkbox" id="lang-checkbox" class="lang-checkbox"/>

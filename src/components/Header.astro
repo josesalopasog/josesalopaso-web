@@ -1,9 +1,11 @@
 ---
 import LangButton from "./React-components/LangButton.jsx";
+import ThemeButton from "./React-components/ThemeButton";
 
 import jslogo from "../assets/images/logo-JS_Tech(white-transparent).png";
 
 import "../styles/header.css";
+
 ---
 
 <header>
@@ -25,7 +27,8 @@ import "../styles/header.css";
     </ul>
   </nav>
 
-  <div class="col-start-3 flex justify-center items-center px-5">
+  <div class="col-start-3 flex gap-5 justify-center items-center ">
+    <ThemeButton />
     <LangButton />
   </div>
 </header>
