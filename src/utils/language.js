@@ -46,7 +46,10 @@ const translations = {
     december2024: "December 2024",
     september2024: "September 2024",
     august2024: "August 2024",
-    october2020: "October 2020"
+    october2020: "October 2020",
+    /*----Contact----*/
+    contactInfo: "If you want to contact me, reach me at:",
+    contactMail: "Or mail me:"
   },
   es: {
     /*----Header---- */
@@ -94,7 +97,10 @@ const translations = {
     december2024: "Diciembre 2024",
     september2024: "Septiembre 2024",
     august2024: "Agosto 2024",
-    october2020: "Octubre 2020"
+    october2020: "Octubre 2020",
+    /*----Contact----*/
+    contactInfo: "Si quieres contactarme, hablame en:",
+    contactMail: "O envíame un correo:"
   },
 };
 
