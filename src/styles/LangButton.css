@@ -1,0 +1,35 @@
+.language-button {
+  background-size: cover;
+  background-position: center;
+  width: 60px;
+  height: 30px;
+  background-color: black;
+  border-radius: 75px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+
+.language-button::before {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../assets/svg/um.svg");
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: 3px;
+  left: 5px;
+  border-radius: 75px;
+}
+.lang-checkbox:not(:checked) + .language-button::before {
+  transition: 0.2s;
+}
+.lang-checkbox:checked + .language-button::before {
+  transition: 0.2s;
+  transform: translateX(25px);
+  background-image: url("../assets/svg/co.svg");
+}
+.lang-checkbox {
+  display: none;
+}

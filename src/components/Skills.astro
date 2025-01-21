@@ -4,13 +4,13 @@ import SkillsIcons from "./React-components/SkillsIcons.jsx";
 
 <section id="skills">
   <div class="section-container">
-    <h2 data-lang="titleAboutMe">Skills</h2>
+    <h2 data-lang="skills">Skills</h2>
     <div class="skills-container flex flex-col justify-center items-center">
       <div class="flex flex-col justify-center items-center">
-        <h2 class="my-3">I Know:</h2>
+        <h2 class="my-3" data-lang="skillsIKnow">I Know:</h2>
         <div class="flex flex-wrap justify-center items-center gap-3">
           <div class="flex flex-col gap-2 border border-white rounded-lg p-3">
-            <h3>Data Analyst</h3>
+            <h3 data-lang="dataAnalyst">Data Analyst</h3>
             <div class="flex flex-wrap justify-center items-center">
               <SkillsIcons
                 client:load
@@ -96,7 +96,7 @@ import SkillsIcons from "./React-components/SkillsIcons.jsx";
         </div>
       </div>
       <div class="flex flex-col justify-center items-center">
-        <h2 class="my-3">I'm learning:</h2>
+        <h2 class="my-3" data-lang="skillsLearning">I'm learning:</h2>
         <div class="flex flex-col gap-2 border border-white rounded-lg p-3">
           <h3>Backend</h3>
           <div class="flex flex-wrap justify-center items-center">
@@ -127,7 +127,7 @@ import SkillsIcons from "./React-components/SkillsIcons.jsx";
         </div>
       </div>
     </div>
-    <h2 class="mt-5">¡Everyday i'm learning something new!</h2>
+    <h2 class="mt-5" data-lang="everydayLearning">¡Every day I try to learn something new!</h2>
   </div>
 </section>
 

@@ -48,7 +48,7 @@ const ProjectsSwiper = () => {
               <a href="https://josesalopasog.github.io/mercadofake-web/" target="_blank">
                 <img src={projectOneImg.src} alt='project 1 img' className='rounded-lg my-1 transition-transform duration-300 hover:scale-110' />
               </a> 
-              <p className='text-[12px] ' > An e-commerce clone inspired by Mercado Libre.</p>
+              <p className='text-[12px]' data-lang="projectOneInfo"> An e-commerce clone inspired by Mercado Libre.</p>
               <TechIcons
                 showReactIcon={true}
                 showViteIcon={true}
@@ -65,8 +65,10 @@ const ProjectsSwiper = () => {
           <SwiperSlide>
             <div className="flex flex-col items-center justify-center w-[300px] h-[400px] p-5 bg-gray-950 rounded-lg m-0 gap-2">
               <h2>ToDo App</h2>
-              <img src={projectTwoImg.src} alt='project 2 img' className='rounded-lg my-1 transition-transform duration-300 hover:scale-110' />
-              <p className='text-[12px] '>An application to keep track of ToDo's</p>
+              <a href="https://josesalopasog.github.io/ToDo-App/" target="_blank">
+                <img src={projectTwoImg.src} alt='project 2 img' className='rounded-lg my-1 transition-transform duration-300 hover:scale-110' />
+              </a>
+              <p className='text-[12px]' data-lang="projectTwoInfo">An web application to keep track of ToDo's</p>
               <TechIcons
                 showReactIcon={true}
                 showJSIcon={true}
@@ -87,8 +89,8 @@ const ProjectsSwiper = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex flex-col gap-3 items-center justify-center w-[300px] h-[400px] p-5 bg-gray-950 rounded-lg m-0">
-              <h2 className="m-0">More Projects</h2>
-              <p className='text-[14px] '>Check out my other projects on: </p>
+              <h2 className="m-0" data-lang="moreProjects">More Projects</h2>
+              <p className="text-[14px]" data-lang="moreProjectsInfo">Check out my other projects on: </p>
               <a href="https://github.com/josesalopasog?tab=repositories" className="flex flex-row items-center justify-center gap-2 px-1 py-[2px] m-0 border border-white rounded-lg transition-transform duration-300 hover:scale-110" target='_blank'>
                 <img src={githubIcon.src} alt='github icon' className='w-3 h-3' />
                 <p className='text-[16px]'>GitHub</p>
