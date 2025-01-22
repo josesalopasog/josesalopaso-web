@@ -1,33 +1,29 @@
 ---
-import { GlobalProvider } from '../context/provider.jsx';
-import Welcome from '../components/Welcome.astro';
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
-import AboutMe from '../components/AboutMe.astro';
-import Projects from '../components/Projects.astro';
-import Skills from '../components/Skills.astro';
-import Contact from '../components/Contact.astro';
-import Education from '../components/Education.astro';
-import Footer from '../components/Footer.astro';
+import Welcome from "../components/Welcome.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Contact from "../components/Contact.astro";
+import Education from "../components/Education.astro";
+import Footer from "../components/Footer.astro";
 
-import "../styles/global.css"
-
-
+import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-<GlobalProvider>
-	<Layout>
-		<Header/> 
-		<main>
-			<Welcome />
-			<AboutMe />
-			<Projects />
-			<Skills />
-			<Education/>
-			<Contact />
-		</main>	
-		<Footer />
-	</Layout>
-</GlobalProvider>
+
+<Layout>
+  <Header />
+  <main>
+    <Welcome />
+    <AboutMe />
+    <Projects />
+    <Skills />
+    <Education />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

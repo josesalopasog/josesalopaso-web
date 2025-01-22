@@ -1,0 +1,14 @@
+#dynamic-title{
+  color:white;
+  cursor: pointer;
+  transition: 5s ease;
+  font-size: 30px;
+}
+
+#dynamic-title.visible{
+  color: transparent;
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 3s ease;
+}

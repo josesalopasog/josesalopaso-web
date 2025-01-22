@@ -1,0 +1,16 @@
+.skills-by-knowing{
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.skills-by-role{
+    @apply border-[2px] border-black dark:border-white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 0.5rem;
+    padding: 3px;
+}

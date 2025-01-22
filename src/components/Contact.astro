@@ -8,30 +8,30 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid';
 
 <section id="contact" >
     <div class="section-container">
-        <h2 data-lang="contact">Let's Chat</h2>
+        <h2 class="dynamic-title" data-lang="contact">Let's Chat</h2>
         <p data-lang="contactInfo">If you want to contact me, reach me at:</p>
         <div class="flex flex-row gap-3 items-center justify-center p-5 ">
-            <a href="https://github.com/josesalopasog" class="flex flex-row items-center justify-center gap-2 px-1 py-[4px] m-0 border border-[#c5221f] rounded-lg transition-transform duration-300 hover:scale-110" target='_blank'>
+            <a href="https://github.com/josesalopasog" class="flex flex-row items-center justify-center gap-2 px-1 py-[4px] m-0 border-2 border-[#c5221f] rounded-lg transition-transform duration-300 hover:scale-110" target='_blank'>
                 <img src={githubIcon.src} alt='github icon' class='w-4 h-4' />
                 <p class='text-[18px]'>GitHub</p>
-                <ArrowTopRightOnSquareIcon className='w-4 h-4' />
+                <ArrowTopRightOnSquareIcon className='w-4 h-4 text-black dark:text-white' />
             </a>
-            <a href="https://www.linkedin.com/in/josé-salopaso-484143187/" class="flex flex-row items-center justify-center gap-2 px-1 py-[4px] m-0 border border-[#0A66C2] rounded-lg transition-transform duration-300 hover:scale-110" target='_blank'>
+            <a href="https://www.linkedin.com/in/josé-salopaso-484143187/" class="flex flex-row items-center justify-center gap-2 px-1 py-[4px] m-0 border-2 border-[#0A66C2] rounded-lg transition-transform duration-300 hover:scale-110" target='_blank'>
                 <img src={linkedinIcon.src} alt='linkedin icon' class='w-4 h-4' />
                 <p class='text-[18px]'>LinkedIn</p>
-                <ArrowTopRightOnSquareIcon className='w-4 h-4' />
+                <ArrowTopRightOnSquareIcon className='w-4 h-4 text-black dark:text-white' />
             </a>
         </div>  
         <p data-lang="contactMail">Or mail me:</p>  
         <div class="flex flex-row gap-3 items-center justify-center p-5 ">
             <a 
                 href="mailto:josesalopaso@gmail.com?subject=Let's%20talk%20about%20work&body=Mensaje%20predefinido" 
-                class="flex flex-row items-center justify-center gap-2 px-1 py-[4px] m-0 border border-[#fbbc04] rounded-lg transition-transform duration-300 hover:scale-110" 
+                class="flex flex-row items-center justify-center gap-2 px-1 py-[4px] m-0 border-2 border-[#fbbc04] rounded-lg transition-transform duration-300 hover:scale-110" 
                 target='_blank'
             >
                 <img src={gmailIcon.src} alt='gmail icon' class='w-4 h-4' />
                 <p class='text-[18px]'>josesalopaso@gmail.com </p>
-                <ArrowTopRightOnSquareIcon className='w-4 h-4' />
+                <ArrowTopRightOnSquareIcon className='w-4 h-4 text-black dark:text-white' />
             </a>
         </div>  
     </div>    

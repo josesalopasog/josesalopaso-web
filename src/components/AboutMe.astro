@@ -1,10 +1,14 @@
 ---
 import myicon from '../assets/images/my-icon.webp'
+import "../styles/AboutMe.css";
 ---
 
 <section id="about-me" >
     <div class="section-container">
-        <h2 data-lang="aboutMe">About Me</h2>
+        <div>
+            <h2 class="dynamic-title" data-lang="aboutMe">About Me</h2>    
+        </div>
+        
         <div class="about-me flex justify-center items-center">
             <img class="w-[250px] h-[250px] transition-transform duration-300 hover:scale-110 cursor-pointer" src={myicon.src} alt="my-icon"  />
             <p data-lang="textAboutMe" class="text-left px-5">

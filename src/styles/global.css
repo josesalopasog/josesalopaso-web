@@ -12,32 +12,17 @@
 }
 
 html {
-  background-color: black;
   font-size: 24px;
   font-family: system-ui, sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
+  @apply bg-white dark:bg-black;
   display: block;
   justify-content: center;
   margin: 0;
   padding: 0;
-}
-/* Cambiar el color y el tamaño de las flechas */
-.swiper-button-next,
-.swiper-button-prev {
-  @apply text-white text-2xl;
-}
-
-/* Puntos inactivos */
-.swiper-pagination-bullet {
-  @apply bg-white opacity-80 ;
-}
-
-/* Punto activo */
-.swiper-pagination-bullet-active {
-  @apply bg-gradient-to-t from-[#e100ff] to-[#00e1ff];
 }
 
 #background {
@@ -49,8 +34,58 @@ body {
   z-index: -1;
   filter: blur(100px);
 }
+/*---Titles---*/
+.dynamic-title{
+  @apply text-black dark:text-white;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-size: 36px;
+}
 
-/*---Secciones---*/
+.dynamic-title.visible{
+  color: transparent;
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 1.5s ease;
+}
+
+h2 {
+  @apply text-black dark:text-white;
+  font-family: "Cal Sans SemiBold";
+  text-align: center;
+  transition: 3s ease;
+  font-size: 32px;
+}
+
+h3 {
+  @apply text-black dark:text-white;
+  font-family: "Cal Sans SemiBold";
+  text-align: center;
+  font-size: 20px;
+}
+
+/* .section-container h2 {
+  @apply text-black dark:text-white;
+  cursor: pointer;
+  transition: 3s ease;
+  font-size: 30px;
+} */
+
+h2:hover {
+  cursor:pointer;
+  color: transparent;
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 0.8s ease;
+}
+
+p{
+  @apply text-black/80 font-semibold dark:text-white dark:font-normal;
+}
+
+/*---Sections---*/
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -65,8 +100,8 @@ section {
 }
 
 .section-container {
+  @apply bg-white dark:bg-[#030303];
   margin: 0 auto;
-  background-color: rgb(3, 3, 3);
   font-family: "Open Sans";
   text-align: center;
   width: 100%;
@@ -110,28 +145,10 @@ section {
   }
 }
 
-h2 {
-  font-family: "Cal Sans SemiBold";
-  text-align: center;
-  font-size: 36px;
-}
-
-.section-container h2 {
-  cursor: pointer;
-  transition: 0.8s;
-  font-size: 30px;
-}
-
-.section-container h2:hover {
-  color: transparent;
-  background: var(--gradient-color);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
+/*---Responsive---*/
 @media (max-width: 1400px) {
 
-    body{
+  body{
     width: 100%;
     font-size: 20px;
   } 

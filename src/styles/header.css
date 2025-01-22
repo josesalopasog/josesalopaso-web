@@ -1,4 +1,5 @@
 header {
+    @apply: bg-white dark:bg-black;
     display: grid;
     grid-template-columns: 20% 1fr 20%;
     position: sticky;
@@ -6,7 +7,6 @@ header {
     top: 0;
     width: 100%;
     height: 70px; 
-    background-color: rgba(5,5,5,20%);
     backdrop-filter: blur(10px); /* Aplicar el efecto borroso */
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;

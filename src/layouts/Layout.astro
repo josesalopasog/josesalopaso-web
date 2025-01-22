@@ -3,7 +3,7 @@ import background from "../assets/svg/background.svg";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -13,12 +13,13 @@ import background from "../assets/svg/background.svg";
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>José Salopaso | Dev</title>
   </head>
   <body>
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <slot />
     <script src="../utils/language.js"></script>
+    <script src="../utils/dynamicTitle.js"></script>
   </body>
 </html>
 

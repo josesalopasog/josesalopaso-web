@@ -1,6 +1,6 @@
 ---
 import LangButton from "./React-components/LangButton.jsx";
-import ThemeButton from "./React-components/ThemeButton";
+import { MoonIcon } from "../icons";
 
 import jslogo from "../assets/images/logo-JS_Tech(white-transparent).png";
 
@@ -18,7 +18,7 @@ import "../styles/header.css";
   </a>
 
   <nav id="main-nav" class="col-start-2 font-semibold justify-center items-center hidden custom:flex">
-    <ul class="flex gap-x-4">
+    <ul class="flex gap-x-4 text-black dark:text-white">
       <li ><a href="#about-me" data-lang="aboutMe">About Me</a></li>
       <li ><a href="#projects" data-lang="projects">Projects</a></li>
       <li ><a href="#skills" data-lang="skills">Skills</a></li>
@@ -27,8 +27,10 @@ import "../styles/header.css";
     </ul>
   </nav>
 
-  <div class="col-start-3 flex gap-5 justify-center items-center ">
-    <ThemeButton />
+  <div class="col-start-3 flex gap-5 justify-center items-center px-5 ">
+    <button id="theme-toggle" class="transition">
+      <MoonIcon className="w-4 h-4 cursor-pointer text-[#00e1ff]"/>   
+    </button>
     <LangButton />
   </div>
 </header>
