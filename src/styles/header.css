@@ -1,7 +1,7 @@
 header {
     @apply: bg-white dark:bg-black;
     display: grid;
-    grid-template-columns: 20% 1fr 20%;
+    grid-template-columns: 25% 1fr 25%;
     position: sticky;
     justify-content: space-between;
     top: 0;
@@ -33,9 +33,16 @@ nav {
   display: flex; 
 }
 
-@media (max-width: 840px) {
+@media (max-width: 956px) {
   nav {
     display: none; 
   }
 }
+
+@media (max-width: 750px) {
+  header {
+    grid-template-columns: 30% 1fr 50%; 
+  }
+}
+
 
