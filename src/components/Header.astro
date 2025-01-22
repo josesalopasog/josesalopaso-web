@@ -1,11 +1,12 @@
 ---
 import LangButton from "./React-components/LangButton.jsx";
-
+import ThemeButton from "./React-components/ThemeButton";
+import SideMenuButton from "./React-components/SideMenuButton";
 
 import jslogo from "../assets/images/logo-JS_Tech(white-transparent).png";
 
 import "../styles/header.css";
-import ThemeButton from "./React-components/ThemeButton";
+
 
 ---
 
@@ -31,5 +32,6 @@ import ThemeButton from "./React-components/ThemeButton";
   <div class="col-start-3 flex gap-3 justify-center items-center">
     <ThemeButton client:load />
     <LangButton />
+    <SideMenuButton client:load />
   </div>
 </header>

@@ -37,6 +37,9 @@ nav {
   nav {
     display: none; 
   }
+  header {
+    grid-template-columns: 20% 1fr 30%; 
+  }
 }
 
 @media (max-width: 750px) {

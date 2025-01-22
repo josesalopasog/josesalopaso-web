@@ -1,12 +1,12 @@
 /* Cambiar el color y el tamaño de las flechas */
 .swiper-button-next,
 .swiper-button-prev {
-  @apply text-white text-2xl;
+  @apply text-black dark:text-white text-2xl;
 }
 
 /* Puntos inactivos */
 .swiper-pagination-bullet {
-  @apply bg-white opacity-80 ;
+  @apply bg-black dark:bg-white opacity-80 ;
 }
 
 /* Punto activo */

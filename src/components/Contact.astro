@@ -1,5 +1,5 @@
 ---
-import githubIcon from '../assets/svg/github-dark.svg';
+import { GithubIcon } from '../icons';
 import linkedinIcon from '../assets/svg/linkedin.svg';
 import gmailIcon from '../assets/svg/gmail.svg';
 
@@ -9,10 +9,10 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid';
 <section id="contact" >
     <div class="section-container">
         <h2 class="dynamic-title" data-lang="contact">Let's Chat</h2>
-        <p data-lang="contactInfo">If you want to contact me, reach me at:</p>
+        <p data-lang="contactInfo">If you want to work with me, reach me at:</p>
         <div class="flex flex-row gap-3 items-center justify-center p-5 ">
             <a href="https://github.com/josesalopasog" class="flex flex-row items-center justify-center gap-2 px-1 py-[4px] m-0 border-2 border-[#c5221f] rounded-lg transition-transform duration-300 hover:scale-110" target='_blank'>
-                <img src={githubIcon.src} alt='github icon' class='w-4 h-4' />
+                <GithubIcon className='w-4 h-4 text-black dark:text-white' />
                 <p class='text-[18px]'>GitHub</p>
                 <ArrowTopRightOnSquareIcon className='w-4 h-4 text-black dark:text-white' />
             </a>
