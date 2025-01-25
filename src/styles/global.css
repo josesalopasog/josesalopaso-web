@@ -27,7 +27,7 @@
 
 html {
   font-size: 24px;
-  font-family: system-ui, sans-serif;
+  font-family: Roboto;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
   scroll-padding-bottom: 100px;
@@ -92,7 +92,9 @@ h2:hover {
 }
 
 p{
-  @apply text-black/80 font-semibold dark:text-white dark:font-normal;
+  @apply text-black font-semibold dark:text-white dark:font-normal;
+  font-size: 24px;
+  font-family: "Roboto";
 }
 
 /*---Sections---*/
@@ -112,7 +114,7 @@ section {
 .section-container {
   @apply bg-white dark:bg-[#030303];
   margin: 0 auto;
-  font-family: "Open Sans";
+  font-family: "Roboto";
   text-align: center;
   width: 100%;
   height: 100%;
@@ -182,3 +184,8 @@ section {
       width: 100%;
     }
   }
+@media (max-width: 480px){
+  p {
+    font-size: 20px;
+  }
+}

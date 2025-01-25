@@ -58,7 +58,7 @@ a:active {
 
 @media (max-width: 480px) {
   header {
-    grid-template-columns: 25% 1fr 45%; 
+    grid-template-columns: 25% 1fr 70%; 
   }
 }
 

@@ -11,7 +11,7 @@ const translations = {
     welcomeData: "Hi, I'm",
     /*----About Me---- */
     textAboutMe:
-      "I am an electronic engineer and software developer, passionate about the world of programming. Currently, I am enhancing my skills in fullstack web development and seeking an opportunity to advance my professional career in this area. I have over 3 years of work experience in electronic security and data analysis.",
+      "I am an electronic engineer and software developer, passionate about the world of programming. Currently, I am enhancing my skills in fullstack web development and seeking for opportunities to advance my professional career in this area. I have over 3 years of work experience in electronic security and data analysis.",
     readyToWork: "Ready to work",
     fromColombia: "From Colombia",
     willingToMove: "Willing to move",
@@ -68,7 +68,7 @@ const translations = {
     welcomeData: "Hola, soy",
     /*----About Me---- */
     textAboutMe:
-      "Soy ingeniero electrónico y desarrollador de software, apasionado por el mundo de la programación. Actualmente, estoy mejorando mis habilidades en el desarrollo web fullstack y busco una oportunidad para avanzar en mi carrera profesional en esta área. Tengo más de 3 años de experiencia laboral en seguridad electrónica y análisis de datos.",
+      "Soy ingeniero electrónico y desarrollador de software, apasionado por el mundo de la programación. Actualmente, estoy mejorando mis habilidades en el desarrollo web fullstack y busco oportunidades para avanzar en mi carrera profesional en esta área. Tengo más de 3 años de experiencia laboral en seguridad electrónica y análisis de datos.",
       readyToWork: "Listo para trabajar",
       fromColombia: "De Colombia",
       willingToMove: "Dispuesto a viajar",

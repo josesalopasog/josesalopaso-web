@@ -8,7 +8,7 @@ export default {
 				'ws-960px': {min:'960px'},
 				'custom': {min:'960px'},
 				'430px' : {max:'430px'},
-				'xs-screen': {min:'480px'},  // Móviles pequeños
+				'xs-screen': {max:'480px'},  // Móviles pequeños
         		'sm-screen': {min:'640px'},  // Móviles grandes
         		'md-screen': {min:'768px'},  // Tablets
         		'lg-screen': {min:'1024px'}, // Laptops pequeñas

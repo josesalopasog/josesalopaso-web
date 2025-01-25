@@ -1,21 +1,22 @@
 .about-me-pill {
     @apply 
-    w-[130px] 
-    h-[25px] 
+    w-[162.5px] 
+    h-[31.25px] 
     flex 
     flex-row 
-    border-[2px] 
+    border-[2.5px] 
     justify-center 
     items-center 
     gap-1 
-    rounded-lg  
+    rounded-[26px] 
     cursor-pointer 
-    text-[10px] 
+    text-[12.5px] 
     transition-transform 
     duration-300 
     hover:scale-110 
-    text-black/80 
+    text-black 
     font-semibold 
     dark:text-white 
     dark:font-normal;
+    font-family: "Roboto";
 }
