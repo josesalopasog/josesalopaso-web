@@ -6,13 +6,13 @@ import SideMenuButton from "./React-components/SideMenuButton";
 import jslogo_dark from "../assets/svg/js-tech-dark.svg";
 import jslogo from "../assets/svg/js-tech-light.svg";
 
-import "../styles/header.css";
+import "../styles/Header.css";
 ---
 
 <header>
   <a href="#" class="col-start-1 justify-center items-center px-5 430px:px-1 transition-transform duration-300 hover:scale-110 hidden dark:flex">
     <img
-        class="w-[60px] h-[60px] object-cover"
+        class="w-[75px] h-[75px] object-cover"
         src={jslogo_dark.src}
         alt="JS-logo"
     />    
@@ -20,13 +20,13 @@ import "../styles/header.css";
 
   <a href="#" class="col-start-1 flex justify-center items-center px-5 430px:px-1 transition-transform duration-300 hover:scale-110 dark:hidden">
     <img
-        class="w-[60px] h-[60px] object-cover"
+        class="w-[75px] h-[75px] object-cover"
         src={jslogo.src}
         alt="JS-logo"
     />    
   </a>
 
-  <nav id="main-nav" class="col-start-2 font-semibold justify-center items-center hidden custom:flex">
+  <nav id="main-nav" class="col-start-2 font-semibold justify-center items-center hidden lg-screen:flex">
     <ul class="flex gap-x-4 text-black dark:text-white">
       <li ><a href="#about-me" data-lang="aboutMe">About Me</a></li>
       <li ><a href="#projects" data-lang="projects">Projects</a></li>
@@ -36,7 +36,7 @@ import "../styles/header.css";
     </ul>
   </nav>
 
-  <div class="nav-buttons col-start-3 flex gap-3 justify-center items-center">
+  <div class="nav-buttons col-start-3 flex justify-center gap-3 items-center">
     <ThemeButton client:load />
     <LangButton />
     <SideMenuButton client:load />

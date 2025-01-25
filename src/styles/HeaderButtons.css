@@ -1,0 +1,116 @@
+/*---Lang Button---*/
+.language-button {
+  @apply bg-black dark:bg-black;
+  background-size: cover;
+  background-position: center;
+  width: 75px;
+  height: 37.5px;
+  border-radius: 93.75px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+
+.language-button::before {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../assets/svg/um.svg");
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: 3.75px;
+  left: 6.25px;
+  border-radius: 93.75px;
+}
+.lang-checkbox:not(:checked) + .language-button::before {
+  transition: 0.2s;
+}
+.lang-checkbox:checked + .language-button::before {
+  transition: 0.2s;
+  transform: translateX(32.5px);
+  background-image: url("../assets/svg/co.svg");
+}
+.lang-checkbox {
+  display: none;
+}
+
+/*---Side Menu Button---*/
+.side-menu-button {
+  @apply 
+    w-[46px] 
+    h-[46px]  
+    cursor-pointer 
+    text-black dark:text-white 
+    flex lg-screen:hidden 
+    transition-transform duration-300 
+    hover:scale-110 
+    hover:text-[#BD34FE] 
+    dark:hover:text-[#00e1ff];
+}
+
+/*---Side Menu ---*/
+.side-menu {
+  height: 100%;
+}
+
+.nav-mobile-container {
+  @apply bg-white dark:bg-[#030303];
+  margin: 0 auto;
+  font-family: "Open Sans";
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: relative;
+}
+
+.nav-mobile-container::after,
+.nav-mobile-container::before {
+  background-image: conic-gradient(
+    from var(--angle),
+    #e100ff,
+    #00e1ff,
+    #e100ff
+  );
+  content: "";
+  position: absolute;
+  height: calc(100% + 0.3 * 1em);
+  width: calc(100% + 0.3 * 1em);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius: 32px;
+  animation: 3s spin linear infinite;
+  padding: 40px;
+}
+.nav-mobile-container::before {
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.nav-mobile-container ul{
+  @apply 
+    flex flex-col 
+    text-right 
+    gap-y-[65.5px] 
+    p-[46px] 
+    rounded-lg  
+    text-black dark:text-white;
+}
+
+@media (min-width: 1024px) {
+  .side-menu {
+    display: none;
+  }
+}
