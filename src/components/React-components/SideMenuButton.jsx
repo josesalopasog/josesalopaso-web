@@ -15,9 +15,9 @@ const SideMenuButton = () => {
             {/* Botón para abrir/cerrar el menú */}
             <button onClick={toggleMenu}>
                 {menuOpen === false ? (
-                    <MenuBarsIcon className="w-6 h-6 cursor-pointer text-black dark:text-white flex custom:hidden transition-transform duration-300 hover:scale-110"/>
+                    <MenuBarsIcon className="w-6 h-6 cursor-pointer text-black dark:text-white flex custom:hidden transition-transform duration-300 hover:scale-110 hover:text-[#BD34FE] dark:hover:text-[#00e1ff]"/>
                 ) : (
-                    <CloseIcon className="w-6 h-6 cursor-pointer text-black dark:text-white flex custom:hidden transition-transform duration-300 hover:scale-110"/>
+                    <CloseIcon className="w-6 h-6 cursor-pointer text-black dark:text-white flex custom:hidden transition-transform duration-300 hover:scale-110 hover:text-[#BD34FE] dark:hover:text-[#00e1ff]"/>
                 )}                
             </button>
             

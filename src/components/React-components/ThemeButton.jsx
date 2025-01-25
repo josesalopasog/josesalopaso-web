@@ -23,9 +23,9 @@ const ThemeButton = () => {
             onClick={toggleTheme}
         >
             {theme === "dark" ? (
-                <SunIcon className="w-5 h-5 cursor-pointer text-[#00e1ff] transition-transform duration-300 hover:scale-110" />
+                <SunIcon className="w-5 h-5 cursor-pointer text-[#00e1ff] transition-transform duration-300 hover:scale-110 hover:text-[#BD34FE]" />
             ) : (
-                <MoonIcon className="w-4 h-4 cursor-pointer text-[#BD34FE] transition-transform duration-300 hover:scale-110" />
+                <MoonIcon className="w-4 h-4 cursor-pointer text-[#BD34FE] transition-transform duration-300 hover:scale-110 hover:text-[#00e1ff]" />
             )}
         </button>
     );

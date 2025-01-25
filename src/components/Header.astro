@@ -3,15 +3,22 @@ import LangButton from "./React-components/LangButton.jsx";
 import ThemeButton from "./React-components/ThemeButton";
 import SideMenuButton from "./React-components/SideMenuButton";
 
-import jslogo from "../assets/images/logo-JS_Tech(white-transparent).png";
+import jslogo_dark from "../assets/svg/js-tech-dark.svg";
+import jslogo from "../assets/svg/js-tech-light.svg";
 
 import "../styles/header.css";
-
-
 ---
 
 <header>
-  <a href="#" class="col-start-1 flex justify-center items-center px-5">
+  <a href="#" class="col-start-1 justify-center items-center px-5 430px:px-1 transition-transform duration-300 hover:scale-110 hidden dark:flex">
+    <img
+        class="w-[60px] h-[60px] object-cover"
+        src={jslogo_dark.src}
+        alt="JS-logo"
+    />    
+  </a>
+
+  <a href="#" class="col-start-1 flex justify-center items-center px-5 430px:px-1 transition-transform duration-300 hover:scale-110 dark:hidden">
     <img
         class="w-[60px] h-[60px] object-cover"
         src={jslogo.src}
@@ -29,7 +36,7 @@ import "../styles/header.css";
     </ul>
   </nav>
 
-  <div class="col-start-3 flex gap-3 justify-center items-center">
+  <div class="nav-buttons col-start-3 flex gap-3 justify-center items-center">
     <ThemeButton client:load />
     <LangButton />
     <SideMenuButton client:load />

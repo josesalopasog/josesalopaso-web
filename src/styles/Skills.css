@@ -1,6 +1,6 @@
 .skills-by-knowing{
     display: flex;
-    flex-direction: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;

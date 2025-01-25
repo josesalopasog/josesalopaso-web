@@ -1,9 +1,16 @@
 ---
 import "../styles/footer.css";
+import { HeartIcon } from "../icons";
 ---
 
 <footer>
   <div class="footer-container">
-    <p class="text-[16px] ">Made with 🩵 by  José Salopaso</p>    
+    <p class="flex flex-row text-[16px] align-middle justify-center ">
+      <span data-lang="madeWith">Made with</span>
+      <span>
+        <HeartIcon  className="w-4 h-4 mx-2 dark:fill-[#00D8FF] fill-[#BD34FE] " />
+      </span>  
+      <span data-lang="by">by  José Salopaso!</span>
+    </p>    
   </div>
 </footer>

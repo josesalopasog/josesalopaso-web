@@ -1,25 +1,9 @@
 import PropTypes from 'prop-types';
-
-import reactIcon from '../../assets/svg/react.svg';
-import tailwindIcon from '../../assets/svg/tailwindcss.svg';
-import javascriptIcon from '../../assets/svg/javascript.svg';
-import htmlIcon from '../../assets/svg/html5.svg';
-import cssIcon from '../../assets/svg/css_old.svg';
-import viteIcon from '../../assets/svg/vitejs.svg';
-import pythonIcon from '../../assets/svg/python.svg';
-import excelIcon from '../../assets/svg/excel.svg';
-import sapIcon from '../../assets/svg/sap.svg';
-import jupyterIcon from '../../assets/svg/jupyter.svg';
-import gitIcon from '../../assets/svg/git.svg';
-import githubIcon from '../../assets/svg/github-dark.svg';
-import astroIcon from '../../assets/svg/astro_dark.svg';
-import powerBIIcon from '../../assets/svg/power-bi.svg';
 import linuxIcon from '../../assets/svg/linux.svg';
-import vscodeIcon from '../../assets/svg/vscode.svg';
-import postgresqlIcon from '../../assets/svg/postgresql.svg';
-import mysqlIcon from '../../assets/svg/mysql.svg';
 import nodejsIcon from '../../assets/svg/nodejs.svg';
-import expressjsIcon from '../../assets/svg/expressjs_dark.svg';
+
+
+import { ReactIcon, TailwindCssIcon, JavascriptIcon, Html5Icon, CssIcon, ViteJsIcon, PythonIcon, ExcelIcon, SapIcon, JupyterIcon, GitIcon, GithubIcon, AstroIcon, PowerBiIcon, VsCodeIcon, PostgreSqlICon, MySqlIcon, ExpressJsIcon } from '../../icons';
 
 import '../../styles/SkillsIcons.css';
 
@@ -72,91 +56,91 @@ const SkillsIcons = ({
     <div className="flex flex-wrap gap-1 items-center justify-center w-full cursor-pointer">
       {showReactIcon && (
         <div className="skill-icon">
-          <img src={reactIcon.src} alt="react-icon" />
+          <ReactIcon className="w-5 h-5" />
           <p>React</p>
         </div>
       )}
       {showViteIcon && (
         <div className="skill-icon">
-          <img src={viteIcon.src} alt="vite-icon" />
+          <ViteJsIcon className="w-5 h-5" />
           <p>Vite.js</p>
         </div>
       )}
       {showAstroIcon && (
         <div className="skill-icon">
-          <img src={astroIcon.src} alt="astro-icon" />
+          <AstroIcon className="w-5 h-5" />
           <p>Astro</p>
         </div>
       )}      
       {showTailwindIcon && (
         <div className="skill-icon">
-          <img src={tailwindIcon.src} alt="tailwind-icon" />
+          <TailwindCssIcon className="w-5 h-5" />
           <p>TailwindCSS</p>
         </div>
       )}
       {showJSIcon && (
         <div className="skill-icon">
-          <img src={javascriptIcon.src} alt="javascript-icon" />
+          <JavascriptIcon className="w-5 h-5" />
           <p>Javascript</p>
         </div>
       )}
       {showHTMLIcon && (
         <div className="skill-icon">
-          <img src={htmlIcon.src} alt="html5-icon" />
+          <Html5Icon className="w-5 h-5" />
           <p>HTML</p>
         </div>
       )}
       {showCSSIcon && (
         <div className="skill-icon">
-          <img src={cssIcon.src} alt="css-icon" />
+          <CssIcon className="w-5 h-5" />
           <p>CSS</p>
         </div>
       )}
       {showPythonIcon && (
         <div className="skill-icon">
-          <img src={pythonIcon.src} alt="python-icon" />
+          <PythonIcon className="w-5 h-5" />
           <p>Python</p>
         </div>
       )}
       {showExcelIcon && (
         <div className="skill-icon">
-          <img src={excelIcon.src} alt="excel-icon" />
+          <ExcelIcon className="w-5 h-5" />
           <p>Excel</p>
         </div>
       )}
       {showSapIcon && (
         <div className="skill-icon">
-          <img src={sapIcon.src} alt="sap-icon" />
+          <SapIcon className="w-5 h-5" />
           <p>SAP</p>
         </div>
       )}
       {showJupyterIcon && (
         <div className="skill-icon">
-          <img src={jupyterIcon.src} alt="jupyter-icon" />
+          <JupyterIcon className="w-5 h-5" />
           <p>Jupyter NB</p>
         </div>
       )}
       {showGitIcon && (
         <div className="skill-icon">
-          <img src={gitIcon.src} alt="git-icon" />
+          <GitIcon className="w-5 h-5" />
           <p>Git</p>
         </div>
       )}
       {showGithubIcon && (
         <div className="skill-icon">
-          <img src={githubIcon.src} alt="github-icon" />
+          <GithubIcon className="w-5 h-5 fill-black dark:fill-white" />
           <p>Github</p>
         </div>
       )}
       {showVsCodeIcon && (
         <div className="skill-icon">
-          <img src={vscodeIcon.src} alt="vscode-icon" />
+          <VsCodeIcon className="w-5 h-5" />
           <p>VS Code</p>
         </div>
       )}
       {showPowerBIIcon && (
         <div className="skill-icon">
-          <img src={powerBIIcon.src} alt="powerbi-icon" />
+          <PowerBiIcon className="w-5 h-5" />
           <p>Power BI</p>
         </div>
       )}
@@ -168,13 +152,13 @@ const SkillsIcons = ({
       )}
       {showPostgreSQLIcon && (
         <div className="skill-icon">
-          <img src={postgresqlIcon.src} alt="postgresql-icon" />
+          <PostgreSqlICon className="w-5 h-5" />
           <p>PostgreSQL</p>
         </div>
       )}
       {showMySQLIcon && (
         <div className="skill-icon">
-          <img src={mysqlIcon.src} alt="mysql-icon" />
+          <MySqlIcon className="w-5 h-5" />
           <p>MySQL</p>
         </div>
       )}
@@ -186,7 +170,7 @@ const SkillsIcons = ({
       )}
       {showExpressJSIcon && (
         <div className="skill-icon">
-          <img src={expressjsIcon.src} alt="expressjs-icon" />
+          <ExpressJsIcon className="w-5 h-5 fill-black dark:fill-white" />
           <p>Express.js</p>
         </div>
       )}

@@ -1,9 +1,9 @@
 .language-button {
+  @apply bg-black dark:bg-black;
   background-size: cover;
   background-position: center;
   width: 60px;
   height: 30px;
-  background-color: black;
   border-radius: 75px;
   cursor: pointer;
   position: relative;

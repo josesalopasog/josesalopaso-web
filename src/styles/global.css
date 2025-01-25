@@ -11,6 +11,13 @@
   color-scheme: dark light;
 }
 
+@font-face {
+  font-family: "Cal Sans SemiBold";
+  src: url("../assets/fonts/CalSans-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
 html {
   font-size: 24px;
   font-family: system-ui, sans-serif;
@@ -40,7 +47,7 @@ body {
 }
 /*---Titles---*/
 .dynamic-title{
-  @apply text-black dark:text-white;
+  @apply text-black dark:text-white transition-transform duration-300 hover:scale-110;
   cursor: pointer;
   transition: 0.5s ease;
   font-size: 36px;
@@ -55,7 +62,7 @@ body {
 }
 
 h2 {
-  @apply text-black dark:text-white;
+  @apply text-black dark:text-white 430px:text-[30px];
   font-family: "Cal Sans SemiBold";
   text-align: center;
   transition: 2s ease;

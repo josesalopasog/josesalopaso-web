@@ -49,7 +49,10 @@ const translations = {
     october2020: "October 2020",
     /*----Contact----*/
     contactInfo: "If you want to work with me, reach me at:",
-    contactMail: "Or mail me:"
+    contactMail: "Or mail me:",
+    /*----Footer----*/
+    madeWith: "Made with",
+    by: "by Jose Salopaso",
   },
   es: {
     /*----Header---- */
@@ -100,7 +103,10 @@ const translations = {
     october2020: "Octubre 2020",
     /*----Contact----*/
     contactInfo: "Si quieres trabajar conmigo, hablame en:",
-    contactMail: "O envíame un correo:"
+    contactMail: "O envíame un correo:",
+    /*----Footer----*/
+    madeWith: "Hecho con el",
+    by: "por Jose Salopaso",
   },
 };
 
