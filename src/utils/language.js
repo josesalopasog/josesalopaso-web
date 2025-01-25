@@ -11,8 +11,11 @@ const translations = {
     welcomeData: "Hi, I'm",
     /*----About Me---- */
     textAboutMe:
-      "I am a software developer focused on data analysis, data science, machine learning, frontend and backend development. With the skills I have learned, my job is to help companies to improve ther data analysis and visualization in web enviroments. ",
-    /*----Projects----*/
+      "I am an electronic engineer and software developer, passionate about the world of programming. Currently, I am enhancing my skills in fullstack web development and seeking an opportunity to advance my professional career in this area. I have over 3 years of work experience in electronic security and data analysis.",
+    readyToWork: "Ready to work",
+    fromColombia: "From Colombia",
+    willingToMove: "Willing to move",
+      /*----Projects----*/
     projectOneInfo: "An e-commerce clone inspired by Mercado Libre.",
     projectTwoInfo: "An web application to keep track of ToDo's",
     codeButton: "Code",
@@ -65,8 +68,11 @@ const translations = {
     welcomeData: "Hola, soy",
     /*----About Me---- */
     textAboutMe:
-      "Soy un desarrolador de software enfocado en el analisis de datos, machine learning, desarrollo frontend y backend. Con las habilidades que he aprendido, mi trabajo consiste  en ayudar a las compañias en mejorar su analisis de datos y su visualización en los enternos web.",
-    /*----Projects----*/
+      "Soy ingeniero electrónico y desarrollador de software, apasionado por el mundo de la programación. Actualmente, estoy mejorando mis habilidades en el desarrollo web fullstack y busco una oportunidad para avanzar en mi carrera profesional en esta área. Tengo más de 3 años de experiencia laboral en seguridad electrónica y análisis de datos.",
+      readyToWork: "Listo para trabajar",
+      fromColombia: "De Colombia",
+      willingToMove: "Dispuesto a viajar",
+      /*----Projects----*/
     projectOneInfo: "Un e-commerce clon, inspirado en Mercado Libre.",
     projectTwoInfo: "Una aplicación web para listar tus ToDo's",
     codeButton: "Código",

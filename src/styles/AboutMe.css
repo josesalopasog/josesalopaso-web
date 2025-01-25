@@ -1,0 +1,21 @@
+.about-me-pill {
+    @apply 
+    w-[130px] 
+    h-[25px] 
+    flex 
+    flex-row 
+    border-[2px] 
+    justify-center 
+    items-center 
+    gap-1 
+    rounded-lg  
+    cursor-pointer 
+    text-[10px] 
+    transition-transform 
+    duration-300 
+    hover:scale-110 
+    text-black/80 
+    font-semibold 
+    dark:text-white 
+    dark:font-normal;
+}
