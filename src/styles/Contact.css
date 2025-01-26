@@ -1,0 +1,11 @@
+.contact-button-container{
+    @apply flex flex-row items-center justify-center gap-3 px-2 py-[5px] m-0 border-2 rounded-lg transition-transform duration-300 hover:scale-110;
+}
+
+.contact-button-container p{
+    @apply text-[22.5px]
+}
+
+.contact-icon{
+    @apply w-[32px] h-[32px] text-black dark:text-white;
+}

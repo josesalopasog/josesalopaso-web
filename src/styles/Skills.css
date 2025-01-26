@@ -3,14 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 6.25px;
 }
 
 .skills-by-role{
     @apply border-[2px] border-black dark:border-white;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    border-radius: 0.5rem;
-    padding: 3px;
+    gap: 6.25px;
+    border-radius: 20px;
+    padding: 3.75px;
 }
