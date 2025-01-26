@@ -6,38 +6,38 @@ const TechIcons = ({ showReactIcon, showViteIcon, showTailwindIcon, showJSIcon, 
   return (
     <div className="flex flex-wrap gap-1 items-center justify-center w-full cursor-pointer">
       {showReactIcon && (
-        <div className='tech-icon border border-[#00D8FF]'>
-          <ReactIcon className='w-[12px] h-[12px]' />
+        <div className='tech border border-[#00D8FF]'>
+          <ReactIcon className='tech-icon' />
           <p>React</p>
         </div>
       )}
       {showViteIcon && (
-        <div className='tech-icon border border-[#BD34FE]'>
-          <ViteJsIcon className='w-[12px] h-[12px]' />
+        <div className='tech border border-[#BD34FE]'>
+          <ViteJsIcon className='tech-icon' />
           <p>Vite.js</p>
         </div>
       )}
       {showTailwindIcon && (
-        <div className='tech-icon border border-[#0ED7B5]'>
-          <TailwindCssIcon className='w-[12px] h-[12px]'/>
+        <div className='tech border border-[#0ED7B5]'>
+          <TailwindCssIcon className='tech-icon'/>
           <p>TailwindCSS</p>
         </div>
       )}
       {showJSIcon && (
-        <div className='tech-icon border border-[#f0db4f]'>
-          <JavascriptIcon className='w-[12px] h-[12px]'/>
+        <div className='tech border border-[#f0db4f]'>
+          <JavascriptIcon className='tech-icon'/>
           <p>Javascript</p>
         </div>
       )}
       {showHTMLIcon && (
-        <div className='tech-icon border border-[#e34f26]'>
-          <Html5Icon className='w-[12px] h-[12px]'/>
+        <div className='tech border border-[#e34f26]'>
+          <Html5Icon className='tech-icon'/>
           <p>HTML</p>
         </div>
       )}
       {showCSSIcon && (
-        <div className='tech-icon border border-[#2965f1]'>
-          <CssIcon className='w-[12px] h-[12px]'/>
+        <div className='tech border border-[#2965f1]'>
+          <CssIcon className='tech-icon'/>
           <p>CSS</p>
         </div>
       )}

@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.tech-icon {
+.tech {
     @apply 
         flex 
         flex-row 
         items-center 
         justify-center 
         px-1 
-        py-[2px] 
+        py-[2.5px] 
         m-0 
         rounded-lg 
         transition-transform 
@@ -17,17 +17,29 @@
         hover:scale-110 
 }
 
-.tech-icon p{
+.tech p{
   margin: 0;
-  padding: 0px 5px;
-  font-size: 10px; 
+  padding: 0px 6.25px;
+  font-size: 12.5px; 
 }
 
-.tech-icon img {
-  width: 12px;
-  height: 12px;
+.tech-icon{
+  width: 15px;
+  height: 15px;
 }
 
-.tech-icon:hover {
+.tech:hover {
   transform: scale(1.1); /* hover:scale-110 */
+}
+
+@media (max-width: 480px){
+  .tech p{
+    padding: 0px 2px;
+    font-size: 7.5px; 
+  }
+  
+  .tech-icon{
+    width: 9px;
+    height: 9px;
+  }
 }

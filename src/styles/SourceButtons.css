@@ -1,0 +1,27 @@
+.source-buttons-container{
+    @apply flex flex-row items-center justify-center w-full gap-3 my-1;
+}
+
+.source-button-container{
+    @apply flex flex-row gap-2 p-2 rounded-md transition-transform duration-300 hover:scale-110;
+}
+
+.source-button{ 
+    @apply w-[32px] h-[32px] text-black dark:text-white;
+}
+
+.source-text{
+    @apply text-[22px]
+}
+
+@media (max-width: 480px){
+    .source-button-container{
+        @apply gap-1 p-1;
+    }
+    .source-button{
+        @apply w-[19.2px] h-[19.2px];
+    }
+    .source-text{
+        @apply text-[13.2px]
+    }
+}

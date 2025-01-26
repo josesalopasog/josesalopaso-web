@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import NavButtons from "./NavButtons";
+import SourceButtons from "./SourceButtons";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -17,7 +17,7 @@ import { GithubIcon } from "../../icons";
 
 const ProjectsSwiper = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full p-5 m-0">
+    <div className="flex flex-col items-center justify-center w-full h-full p-[25px] m-0">
       <div style={{ width: "100%" }}>
         <Swiper
           effect={"coverflow"}
@@ -47,7 +47,7 @@ const ProjectsSwiper = () => {
               className="swiper-slide"
               target="_blank"
             >
-              <h2 className="text-[30px]">Mercado Fake</h2>
+              <h2 className="project-title">Mercado Fake</h2>
               <a
                 href="https://josesalopasog.github.io/mercadofake-web/"
                 target="_blank"
@@ -58,7 +58,7 @@ const ProjectsSwiper = () => {
                   className="rounded-lg my-1 transition-transform duration-300 hover:scale-110"
                 />
               </a>
-              <p className="text-[12px]" data-lang="projectOneInfo">
+              <p className="project-info" data-lang="projectOneInfo">
                 {" "}
                 An e-commerce clone inspired by Mercado Libre.
               </p>
@@ -69,7 +69,7 @@ const ProjectsSwiper = () => {
                 showJSIcon={true}
                 showHTMLIcon={true}
               />
-              <NavButtons
+              <SourceButtons
                 WebURL={"https://josesalopasog.github.io/mercadofake-web/"}
                 GitURL={"https://github.com/josesalopasog/mercadofake-web"}
               />
@@ -77,7 +77,7 @@ const ProjectsSwiper = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="swiper-slide">
-              <h2>ToDo App</h2>
+              <h2 className="project-title" >ToDo App</h2>
               <a
                 href="https://josesalopasog.github.io/ToDo-App/"
                 target="_blank"
@@ -88,7 +88,7 @@ const ProjectsSwiper = () => {
                   className="rounded-lg my-1 transition-transform duration-300 hover:scale-110"
                 />
               </a>
-              <p className="text-[12px]" data-lang="projectTwoInfo">
+              <p className="project-info" data-lang="projectTwoInfo">
                 An web application to keep track of ToDo's
               </p>
               <TechIcons
@@ -97,7 +97,7 @@ const ProjectsSwiper = () => {
                 showHTMLIcon={true}
                 showCSSIcon={true}
               />
-              <NavButtons
+              <SourceButtons
                 WebURL={"https://josesalopasog.github.io/ToDo-App/"}
                 GitURL={"https://github.com/josesalopasog/ToDo-App"}
               />
@@ -105,8 +105,8 @@ const ProjectsSwiper = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="swiper-slide">
-              <h2>Proyecto 3</h2>
-              <p>Descripción 3</p>
+              <h2 className="project-title">Proyecto 3</h2>
+              <p className="project-info" >Descripción 3</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>

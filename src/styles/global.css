@@ -107,7 +107,7 @@ p{
 section {
   display: flex;
   flex-direction: column;
-  width: 62.5%;
+  width: 40%;
   margin: 0 auto 100px;
 }
 
@@ -158,23 +158,28 @@ section {
 }
 
 /*---Responsive---*/
+@media (max-width: 1960px) {
+  section{
+    width:50%;
+  }
+}
 @media (max-width: 1750px) {
   body{
     width: 100%;
     font-size: 25px;
   } 
   section {
-    width: 80%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 1420px) {
+  section {
+    width: 70%;
   }
 }
 
 @media (max-width: 1125px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     section {
         margin: 0 auto 62.5px;
         width: 90%;
@@ -189,3 +194,5 @@ section {
     font-size: 20px;
   }
 }
+
+
