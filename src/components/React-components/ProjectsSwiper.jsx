@@ -8,8 +8,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../styles/ProjectsSwiper.css";
 
-import projectOneImg from "../../assets/images/mercadofake-show.jpg";
-import projectTwoImg from "../../assets/images/todoapp-show.jpg";
+import projectOneImg from "../../assets/images/ui-cyberjs-show.jpg";
+import projectTwoImg from "../../assets/images/mercadofake-show.jpg";
+import projectThreeImg from "../../assets/images/todoapp-show.jpg";
 
 import TechIcons from "./TechIcons";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
@@ -47,14 +48,47 @@ const ProjectsSwiper = () => {
               className="swiper-slide"
               target="_blank"
             >
+              <h2 className="project-title">CyberJS UI</h2>
+              <a
+                href="https://ui-cyberjs.netlify.app/"
+                target="_blank"
+              >
+                <img
+                  src={projectOneImg.src}
+                  alt="project 1 img"
+                  className="rounded-lg my-1 transition-transform duration-300 hover:scale-110"
+                />
+              </a>
+              <p className="project-info" data-lang="projectOneInfo">
+                {" "}
+                This project is primarily focused on animations and UI/UX enhancements.
+              </p>
+              <TechIcons
+                showReactIcon={true}
+                showViteIcon={true}
+                showTailwindIcon={true}
+                showJSIcon={true}
+                showHTMLIcon={true}
+              />
+              <SourceButtons
+                WebURL={"https://ui-cyberjs.netlify.app/"}
+                GitURL={"https://github.com/josesalopasog/ui-cyberjs-web"}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="swiper-slide"
+              target="_blank"
+            >
               <h2 className="project-title">Mercado Fake</h2>
               <a
                 href="https://josesalopasog.github.io/mercadofake-web/"
                 target="_blank"
               >
                 <img
-                  src={projectOneImg.src}
-                  alt="project 1 img"
+                  src={projectTwoImg.src}
+                  alt="project 2 img"
                   className="rounded-lg my-1 transition-transform duration-300 hover:scale-110"
                 />
               </a>
@@ -83,8 +117,8 @@ const ProjectsSwiper = () => {
                 target="_blank"
               >
                 <img
-                  src={projectTwoImg.src}
-                  alt="project 2 img"
+                  src={projectThreeImg.src}
+                  alt="project 3 img"
                   className="rounded-lg my-1 transition-transform duration-300 hover:scale-110"
                 />
               </a>
@@ -101,12 +135,6 @@ const ProjectsSwiper = () => {
                 WebURL={"https://josesalopasog.github.io/ToDo-App/"}
                 GitURL={"https://github.com/josesalopasog/ToDo-App"}
               />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiper-slide">
-              <h2 className="project-title">Proyecto 3</h2>
-              <p className="project-info" >Descripción 3</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
