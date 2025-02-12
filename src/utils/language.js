@@ -16,8 +16,9 @@ const translations = {
     fromColombia: "From Colombia",
     willingToMove: "Willing to move",
       /*----Projects----*/
-    projectOneInfo: "An e-commerce clone inspired by Mercado Libre.",
-    projectTwoInfo: "An web application to keep track of ToDo's",
+    projectOneInfo: "This project is primarily focused on animations and UI/UX enhancements.",
+    projectTwoInfo: "An e-commerce clone inspired by Mercado Libre.",
+    projectThreeInfo: "An web application to keep track of ToDo's",
     codeButton: "Code",
     moreProjects: "More Projects",
     moreProjectsInfo: "Check out my other projects on:",
@@ -73,8 +74,9 @@ const translations = {
       fromColombia: "De Colombia",
       willingToMove: "Dispuesto a viajar",
       /*----Projects----*/
-    projectOneInfo: "Un e-commerce clon, inspirado en Mercado Libre.",
-    projectTwoInfo: "Una aplicación web para listar tus ToDo's",
+    projectOneInfo: "Este proyecto se centra principalmente en animaciones y mejoras de UI/UX.",
+    projectTwoInfo: "Un e-commerce clon, inspirado en Mercado Libre.",
+    projectThreeInfo: "Una aplicación web para listar tus ToDo's",
     codeButton: "Código",
     moreProjects: "Otros Proyectos",
     moreProjectsInfo: "Mira mis otros proyectos en:",

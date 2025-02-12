@@ -92,7 +92,7 @@ const ProjectsSwiper = () => {
                   className="rounded-lg my-1 transition-transform duration-300 hover:scale-110"
                 />
               </a>
-              <p className="project-info" data-lang="projectOneInfo">
+              <p className="project-info" data-lang="projectTwoInfo">
                 {" "}
                 An e-commerce clone inspired by Mercado Libre.
               </p>
@@ -122,7 +122,7 @@ const ProjectsSwiper = () => {
                   className="rounded-lg my-1 transition-transform duration-300 hover:scale-110"
                 />
               </a>
-              <p className="project-info" data-lang="projectTwoInfo">
+              <p className="project-info" data-lang="projectThreeInfo">
                 An web application to keep track of ToDo's
               </p>
               <TechIcons

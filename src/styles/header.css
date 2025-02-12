@@ -40,7 +40,7 @@ a:active {
     display: none; 
   }
   header {
-    grid-template-columns: 20% 1fr 30%; 
+    grid-template-columns: 25% 1fr 25%; 
   }
 }
 
