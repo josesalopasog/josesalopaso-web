@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --gradient-color: linear-gradient(
+    to left,
+    rgb(0, 225, 255),
+    rgb(210, 0, 255)
+  );
+  color-scheme: dark light;
+}
+
+@font-face {
+  font-family: "Cal Sans SemiBold";
+  src: url("../../assets/fonts/CalSans-SemiBold.woff") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: Roboto;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  scroll-padding-bottom: 100px;
+}
