@@ -2,7 +2,7 @@ import "./styles.css";
 
 const Projects = () => {
     return(
-        <section className="projects-section" id="projects-section">
+        <section className="projects-section" id="projects">
             <h1>Projects section</h1>
         </section>
     );

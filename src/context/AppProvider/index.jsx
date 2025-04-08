@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { AppContext } from "../AppContext";
 
 export const AppProvider = ({ children }) => {
-    //Ui States ⬇️
+    //States ⬇️
     const [theme, setTheme] = useState("dark");
     const [language, setLanguage] = useState(false);
     const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);
@@ -22,12 +22,17 @@ export const AppProvider = ({ children }) => {
         setTheme(prev => prev === "light" ? "dark" : "light");
     };
 
+    const toggleDropdownMenu = () => {
+        setIsDropdownMenuOpen(prev => !prev);
+    };
+
     return (
         <AppContext.Provider value={{
             theme, setTheme,
             language, setLanguage,
             isDropdownMenuOpen, setIsDropdownMenuOpen,
             toggleTheme,
+            toggleDropdownMenu,
         }}>
             {children}
         </AppContext.Provider>

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dropdown-menu {
+  @apply bg-white/50 dark:bg-black/50;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.4s ease-in-out;
+}
+
+.dropdown-menu.open {
+  top: 0;
+}
+
+.dropdown-menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  gap: 50px;
+}
+
+.dropdown-menu li {
+  font-size: clamp(18px, 4vw, 28px);
+  font-family: CalSans, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  transform: scale(1.1);
+  color: transparent;
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+}

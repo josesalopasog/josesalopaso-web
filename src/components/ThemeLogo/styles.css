@@ -1,0 +1,9 @@
+.theme-logo {
+  object-fit: fill;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+.theme-logo:hover {
+  transform: scale(1.1);
+}

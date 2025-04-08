@@ -9,11 +9,13 @@ import Header from "../Header";
 import Footer from "../Footer";
 //Styles ⬇️
 import "./styles.css";
+import DropdownMenu from "../DropdownMenu";
 
 const Layout = () => {
     return(
         <>
             <Header/>
+            <DropdownMenu />
             <main>
                 <Hero/>
                 <AboutMe/>
@@ -28,3 +30,8 @@ const Layout = () => {
 };
 
 export default Layout;
+
+// Layout component that defines the main structure of the application.
+// It includes the Header, DropdownMenu, Footer, and the main content sections
+// such as Hero, AboutMe, Projects, Skills, and Contact.
+// This component ensures consistent layout across all parts of the page.
