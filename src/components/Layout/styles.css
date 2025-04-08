@@ -1,3 +1,86 @@
-main{
-    height: 100vh;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Contenedor principal del contenido */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  min-height: 100vh;
+  position:relative;
+  margin-top: clamp(60px, 9vw, 70px); 
+}
+
+/* Grid principal que organiza las secciones */
+.main-content {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "hero main"
+    "about main"
+    "contact main";
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Áreas asignadas */
+.hero-section {
+  grid-area: hero;
+}
+
+.about-me-section {
+  grid-area: about;
+}
+
+.section-section {
+  grid-area: contact;
+}
+
+.main-section {
+  grid-area: main;
+  overflow-y: auto;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Estilo visual para todas las secciones */
+.hero-section,
+.about-me-section,
+.section-section,
+.main-section {
+  @apply bg-[#eee]/50 dark:bg-[#111]/50;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1rem;
+  min-height: 200px;
+}
+
+/* Scroll para main-grid */
+.main-section::-webkit-scrollbar {
+  width: 6px;
+}
+.main-section::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* Responsive layout para pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "hero about"
+      "main main"
+      "contact contact";
+  }
+
+  .main-section {
+    max-height: none;
+    overflow-y: visible;
+  }
 }

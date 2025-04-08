@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+footer {
+  @apply bg-[#eee]/50 dark:bg-[#111]/50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 clamp(10px, 4vw, 30px);
+  height: clamp(50px, 8vw, 60px);
+  margin: 0px 10px 10px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  bottom: 0;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  font-family: CalSans;
+  font-size: clamp(12px, 2vw, 18px);
+}
+
+.hearth-icon {
+    margin: 0px 5px;
+  width: clamp(24px, 5vw, 34px);
+}

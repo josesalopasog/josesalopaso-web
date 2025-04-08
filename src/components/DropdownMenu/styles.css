@@ -2,7 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .dropdown-menu {
-  @apply bg-white/50 dark:bg-black/50;
+  @apply bg-[#eee]/50 dark:bg-[#111]/50;
   position: fixed;
   top: -100%;
   left: 0;
@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   transition: top 0.4s ease-in-out;
+  z-index: 999;
 }
 
 .dropdown-menu.open {

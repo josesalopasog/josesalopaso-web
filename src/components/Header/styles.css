@@ -2,18 +2,20 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 header {
-  @apply bg-white/50 dark:bg-black/50;
+  @apply bg-[#eee]/50 dark:bg-[#111]/50;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  width: 100%;
   height: clamp(50px, 8vw, 60px);
   align-items: center;
   padding: 0 clamp(10px, 4vw, 30px);
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 1000;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  z-index: 1000;
+  border-radius: 10px;
 }
 
 .header-first-column,

@@ -17,15 +17,24 @@ const Layout = () => {
             <Header/>
             <DropdownMenu />
             <main>
-                <Hero/>
-                <AboutMe/>
-                <Projects/>
-                <Skills/>
-                <Contact/>
+                <div className="main-content">
+                    <section className="hero-section" id="hero">
+                        <Hero/>
+                    </section>
+                    <section className="about-me-section" id="about-me">
+                        <AboutMe/>    
+                    </section>
+                    <section className="main-section">
+                        <Projects/>
+                        <Skills/>
+                    </section>
+                    <section className="section-section" id="section-me">
+                        <Contact/>    
+                    </section>
+                </div>
             </main>
             <Footer/>
         </>
-
     );
 };
 
