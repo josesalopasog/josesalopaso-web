@@ -1,0 +1,29 @@
+
+.icon-container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.icon-logo{
+    width: clamp(100px, 20vw, 130px);
+}
+
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: clamp(8px, 1vw, 16px);
+    margin: 20px 0px;
+}
+
+.hero-text {
+    display: flex;
+    gap: clamp(8px, 1vw, 16px);
+    align-items: center;
+}
+
+.hero-icons {
+    width: clamp(12px, 3vw, 26px);
+}

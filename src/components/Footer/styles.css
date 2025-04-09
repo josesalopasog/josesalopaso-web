@@ -13,7 +13,6 @@ footer {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
-  bottom: 0;
 }
 
 .footer-text {
@@ -24,6 +23,6 @@ footer {
 }
 
 .hearth-icon {
-    margin: 0px 5px;
+  margin: 0px 5px;
   width: clamp(24px, 5vw, 34px);
 }

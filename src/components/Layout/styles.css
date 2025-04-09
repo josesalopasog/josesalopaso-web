@@ -1,66 +1,74 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Contenedor principal del contenido */
 main {
   display: flex;
   justify-content: center;
   padding: 10px;
-  min-height: 100vh;
   position:relative;
   margin-top: clamp(60px, 9vw, 70px); 
 }
 
-/* Grid principal que organiza las secciones */
 .main-content {
   display: grid;
   grid-template-columns: minmax(200px, 300px) 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
-    "hero main"
-    "about main"
-    "contact main";
+    "hero projects"
+    "profile projects"
+    "about projects"
+    "contact skills";
   gap: 10px;
   width: 100%;
   margin: 0 auto;
 }
 
-/* Áreas asignadas */
 .hero-section {
   grid-area: hero;
+  display:flex;
+  flex-direction: column;
 }
 
 .about-me-section {
   grid-area: about;
 }
 
-.section-section {
+.contact-section {
   grid-area: contact;
 }
 
-.main-section {
-  grid-area: main;
-  overflow-y: auto;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.projects-section{
+  grid-area: projects;
 }
 
-/* Estilo visual para todas las secciones */
+.skills-section{
+  grid-area: skills;
+}
+
+
+
 .hero-section,
+.profile-section,
 .about-me-section,
-.section-section,
-.main-section {
+.contact-section,
+.projects-section,
+.skills-section {
   @apply bg-[#eee]/50 dark:bg-[#111]/50;
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 1rem;
-  min-height: 200px;
+  padding: 10px;
+  justify-content:center;
+  align-items: left;
 }
 
-/* Scroll para main-grid */
+.hero-section{
+  align-items: left;
+  text-align:center;
+}
+
 .main-section::-webkit-scrollbar {
   width: 6px;
 }
@@ -69,18 +77,28 @@ main {
   border-radius: 3px;
 }
 
-/* Responsive layout para pantallas pequeñas */
 @media (max-width: 768px) {
   .main-content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(100px, 150px) 1fr;
     grid-template-areas:
-      "hero about"
-      "main main"
+      "hero profile"
+      "about about"
+      "projects projects"
+      "skills skills"
       "contact contact";
   }
 
   .main-section {
     max-height: none;
     overflow-y: visible;
+  }
+
+  .hero-section,
+  .profile-section,
+  .about-me-section,
+  .contact-section,
+  .projects-section,
+  .skills-section {
+    align-items: center;
   }
 }

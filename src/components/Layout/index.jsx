@@ -7,9 +7,10 @@ import Contact from "../../content/Contact";
 //Components ⬇️
 import Header from "../Header";
 import Footer from "../Footer";
+import DropdownMenu from "../DropdownMenu";
+import Profile from "../../content/Profile";
 //Styles ⬇️
 import "./styles.css";
-import DropdownMenu from "../DropdownMenu";
 
 const Layout = () => {
     return(
@@ -21,14 +22,19 @@ const Layout = () => {
                     <section className="hero-section" id="hero">
                         <Hero/>
                     </section>
+                    <section className="profile-section" id="profile">
+                        <Profile />
+                    </section>
                     <section className="about-me-section" id="about-me">
                         <AboutMe/>    
                     </section>
-                    <section className="main-section">
+                    <section className="projects-section" id="projects-me">
                         <Projects/>
+                    </section>
+                    <section className="skills-section" id="skills-me">
                         <Skills/>
                     </section>
-                    <section className="section-section" id="section-me">
+                    <section className="contact-section" id="contact">
                         <Contact/>    
                     </section>
                 </div>
