@@ -45,8 +45,6 @@ main {
   grid-area: skills;
 }
 
-
-
 .hero-section,
 .profile-section,
 .about-me-section,
@@ -86,11 +84,6 @@ main {
       "projects projects"
       "skills skills"
       "contact contact";
-  }
-
-  .main-section {
-    max-height: none;
-    overflow-y: visible;
   }
 
   .hero-section,

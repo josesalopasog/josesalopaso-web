@@ -45,6 +45,11 @@ h1{
   font-family: "CalSans";
 }
 
+h2{
+  font-size: clamp(14px, 2vw, 18px);
+  font-family: "CalSans";
+}
+
 #background {
   position: fixed;
   top: 0;
