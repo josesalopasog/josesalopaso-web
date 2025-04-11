@@ -4,8 +4,4 @@
     width: 100%;
     gap: clamp(8px, 1vw, 16px);
     margin: 20px 0px;
-}
-
-.hero-icons {
-    width: clamp(12px, 3vw, 26px);
-}
+  }

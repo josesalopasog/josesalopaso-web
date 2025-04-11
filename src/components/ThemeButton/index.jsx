@@ -20,9 +20,9 @@ const ThemeButton = ({ className = "" }) => {
             onClick={toggleTheme} //Toggle the global state on click 
         >
             {theme === "dark" ? ( //Set the theme button to a Sun if it is true if it is false set the icon to a Moon
-                <SunIcon className="theme-toggle-icon  text-[#00e1ff]  hover:text-[#BD34FE]" />
+                <MoonIcon className="theme-toggle-icon  text-[#00e1ff]  hover:text-[#BD34FE]" />
             ) : (
-                <MoonIcon className="theme-toggle-icon  text-[#BD34FE]  hover:text-[#00e1ff]" />
+                <SunIcon className="theme-toggle-icon  text-[#BD34FE]  hover:text-[#00e1ff]" />
             )}
         </button>
     );

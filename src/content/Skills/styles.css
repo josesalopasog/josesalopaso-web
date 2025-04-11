@@ -1,0 +1,25 @@
+.skills-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:left;
+  gap: 20px;
+}
+
+.skills-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.skills-container h2 {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.skills-slider-container {
+  position: relative;
+  overflow: hidden;
+}

@@ -89,7 +89,7 @@ const portfoliosSlides = [
 const Projects = () => {
     return (
         <>
-            <h1>Projects section</h1>
+            <h1>Projects</h1>
             <div className="projects-section-container">
                 <div className="carousels-container">
                     <div className="carousel-wrapper">

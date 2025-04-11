@@ -44,6 +44,6 @@
   }
 
 .contact-icon{
-    width: clamp(16px, 6vw, 20px);
-    height: clamp(16px, 6vw, 20px);
+    width: clamp(12px, 3vw, 26px);
+    height: clamp(12px, 3vw, 26px);
 }

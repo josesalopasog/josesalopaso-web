@@ -4,8 +4,6 @@
   align-items: center;
   width: 100%;
   padding: 16px;
-  max-height: 540px;
-  overflow-y: auto;
 }
 
 .carousels-container {
@@ -21,7 +19,6 @@
   box-sizing: border-box;
 }
 
-/* En responsive: quitamos la altura máxima y el overflow */
 @media (max-width: 640px) {
   .carousel-wrapper {
     flex: 1 1 100%;

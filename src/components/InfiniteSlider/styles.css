@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+.slider-container {
+  border: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: fit-content;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: scroll-left;
+}
+
+.slider-track.right {
+  animation-name: scroll-right;
+}
+
+.slider-container:hover .slider-track {
+  animation-play-state: paused;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.slider-icon {
+  display: inline-flex;
+  width: clamp(12px, 3vw, 26px);
+  height: clamp(12px, 3vw, 26px);
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -19,19 +19,19 @@ const Layout = () => {
             <DropdownMenu />
             <main>
                 <div className="main-content">
-                    <section className="hero-section" id="hero">
+                    <section className="hero-section" id="about-me">
                         <Hero/>
                     </section>
-                    <section className="profile-section" id="profile">
+                    <section className="profile-section">
                         <Profile />
                     </section>
-                    <section className="about-me-section" id="about-me">
+                    <section className="about-me-section">
                         <AboutMe/>    
                     </section>
-                    <section className="projects-section" id="projects-me">
+                    <section className="projects-section" id="projects">
                         <Projects/>
                     </section>
-                    <section className="skills-section" id="skills-me">
+                    <section className="skills-section" id="skills">
                         <Skills/>
                     </section>
                     <section className="contact-section" id="contact">
