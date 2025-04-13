@@ -1,0 +1,64 @@
+{
+    "header": {
+        "aboutMe": "About Me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Let's Chat"
+    },
+    "welcome": "Hi",
+    "aboutMe": {
+        "title": "About Me",
+        "description": "I love and am passionate about creating cool technological things. That's why I got into the world of programming and electronic engineering. With these acquired skills, I enjoy helping people and companies make their dreams come true.",
+        "quote": "Wanna create something cool together?"
+    },
+    "profile": {
+        "title": "Profile",
+        "role": "Fullstack Web Developer · Electronic Engineer",
+        "university": "Sergio Arboleda University",
+        "location": "Bogotá, Colombia",
+        "experience": "+3 years of work experience"
+    },
+    "projects": {
+        "title": "Projects",
+        "decimetrix": {
+          "title": "Decimetrix Assets",
+          "subtitle": "Manage company assets and locate them on a map.",
+          "tag": "Management Systems"
+        },
+        "mercadofake": {
+          "title": "Mercadofake",
+          "subtitle": "A web clone attempt of Mercado Libre",
+          "tag": "E-commerce"
+        },
+        "cyberjs": {
+          "title": "CyberJS - Ui",
+          "subtitle": "A project with my Ui components",
+          "tag": "Utils"
+        },
+        "portfolio": {
+          "title": "My Portfolio",
+          "subtitle": "My first version of portfolio",
+          "tag": "Portfolios"
+        },
+        "more": {
+          "title": "Wanna see more?",
+          "subtitle": "Check out more of my projects on GitHub."
+        }
+    },
+    "skills": {
+        "title": "Stack · Skills",
+        "quote1": "Don't see the skill you need?",
+        "quote2": "Message me and I'll learn it in no time!"
+    },
+    "contact": {
+        "title": "Let's Chat !",
+        "reach": "Reach me at:",
+        "mailMe": "Or mail me:",
+        "subject": "Let's talk about work",
+        "body": "Predefined message"
+    },
+    "footer": {
+        "madeWith": "Made with",
+        "byMe": "by me !"
+    }
+}

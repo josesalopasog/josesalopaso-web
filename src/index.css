@@ -51,7 +51,7 @@ body{
   flex-direction: column;
   line-height: 1.6;
   overflow-x: hidden;
-  font-size: 1.25rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
 }
 
 h1{

@@ -1,0 +1,64 @@
+{
+    "header": {
+        "aboutMe": "Sobre mí",
+        "projects": "Proyectos",
+        "skills": "Habilidades",
+        "contact": "Contacto"
+    },
+    "welcome": "Hola",
+    "aboutMe": {
+        "title": "Sobre mí",
+        "description": "Me gusta y me apasiona el mundo tech y con ello crear cosas cool. Por eso estoy en el mundo de la programación y la ingeniería electrónica. Con las habilidades que he adquirido, disfruto ayudando a personas y empresas a hacer sus sueños realidad.",
+        "quote": "¿Quieres que creemos algo cool juntos?"
+    },
+    "profile": {
+        "title": "Perfil",
+        "role": "Desarrollador Web Fullstack · Ingeniero Electrónico",
+        "university": "Universidad Sergio Arboleda",
+        "location": "Bogotá, Colombia",
+        "experience": "+3 años de experiencia laboral"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "decimetrix": {
+          "title": "Decimetrix Assets",
+          "subtitle": "Gestiona los activos de la empresa y localízalos en un mapa.",
+          "tag": "Sistemas de gestión"
+        },
+        "mercadofake": {
+          "title": "Mercadofake",
+          "subtitle": "Un intento de clon web de Mercado Libre",
+          "tag": "E-commerce"
+        },
+        "cyberjs": {
+          "title": "CyberJS - Ui",
+          "subtitle": "Un proyecto con mis componentes UI",
+          "tag": "Herramientas"
+        },
+        "portfolio": {
+          "title": "Mi Portafolio",
+          "subtitle": "Mi primera versión del portafolio",
+          "tag": "Portafolios"
+        },
+        "more": {
+          "title": "¿Quieres ver más?",
+          "subtitle": "Mira más de mis proyectos en GitHub."
+        }
+    },
+    "skills": {
+        "title": "Stack · Habilidades",
+        "quote1": "¿No ves la habilidad que necesitas?",
+        "quote2": "¡Escríbeme y la aprenderé en menos de lo que esperas!"
+    },
+    "contact": {
+        "title": "¡ Hablemos !",
+        "reach": "Contáctame en:",
+        "mailMe": "O envíame un correo:",
+        "subject": "Hablemos sobre trabajo",
+        "body": "Mensaje predefinido"
+    },
+    "footer": {
+        "madeWith": "¡ Hecho con",
+        "byMe": "por mí !"
+    }
+}

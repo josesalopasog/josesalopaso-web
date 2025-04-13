@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { ReactIcon, TailwindCssIcon, NodeJsIcon, MongoDBIcon, PostgreSqlICon, ReduxIcon, AxiosIcon, JavascriptIcon, CssIcon, Html5Icon, TypescriptIcon, ExpressJsIcon, JwtIcon, SocketIoIcon, DockerIcon, PostmanIcon, GithubIcon, GitIcon, VsCodeIcon, PowerBiIcon } from "../../assets/icons";
 import GradientText from "../../components/GradientText";
 import InfiniteSlider from "../../components/InfiniteSlider";
 import "./styles.css";
 
 const Skills = () => {
+    const { t } = useTranslation();
+
     const frontendItems = [
         { icon: <ReactIcon />, label: "React", color: "#61DAFB" },
         { icon: <ReduxIcon />, label: "Redux", color: "#764ABC" },
@@ -35,7 +38,7 @@ const Skills = () => {
 
     return (
         <>
-            <h1>Stack · Skills</h1>
+            <h1>{t("skills.title")}</h1>
             <div className="skills-content">
                 <div className="skills-container">
                     <div className="skills-slider-container">
@@ -54,8 +57,8 @@ const Skills = () => {
                 </div>
             </div>
             <div className="skills-quote">
-                <GradientText>Don't see the skill you need? </GradientText>
-                <GradientText>Message me and I'll learn it in no time!</GradientText>
+                <GradientText>{t("skills.quote1")}</GradientText>
+                <GradientText>{t("skills.quote2")}</GradientText>
             </div>
         </>
     );

@@ -1,19 +1,22 @@
+import { useTranslation } from "react-i18next";
 import { HeartIcon } from "../../assets/icons";
 
 import "./styles.css";
 
 const Footer = () => {
+    const { t } = useTranslation();
+
     return (
         <footer>
             <p className="footer-text">
-                <span >Made with</span>
+                <span>{t("footer.madeWith")}</span>
                 <span>
-                    <HeartIcon className="hearth-icon dark:fill-[#00D8FF] fill-[#BD34FE] " />
+                    <HeartIcon className="hearth-icon dark:fill-[#00D8FF] fill-[#BD34FE]" />
                 </span>
-                <span >by me!</span>
+                <span>{t("footer.byMe")}</span>
             </p>
         </footer>
     );
 };
 
-export default Footer; 
+export default Footer;
