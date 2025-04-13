@@ -1,3 +1,4 @@
+import GradientText from "../../components/GradientText";
 import "./styles.css"
 
 const AboutMe = () => {
@@ -6,13 +7,16 @@ const AboutMe = () => {
             <h1>About Me</h1>
             <div className="about-me-container">
                 <p>
-                    I am an electronic engineer and software developer, 
-                    passionate about the world of programming. Currently, 
-                    I am enhancing my skills in fullstack web development 
-                    and seeking for opportunities to advance my professional 
-                    career in this area. I have over 3 years of work experience 
-                    in electronic security and data analysis
+                    I love and am passionate about creating cool technological things. That's why I got into the world of programming and electronic engineering. With these acquired skills, I enjoy helping people and companies make their dreams come true.
                 </p>
+            </div>
+            <div className="about-me-quote">
+                <GradientText>
+                    <span>Wanna create something cool together? </span> 
+                    <span>
+                        <a href="#contact">👇🏻</a>
+                    </span>
+                </GradientText>
             </div>
         </>
     );

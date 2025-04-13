@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
 .carousel-container {
   @apply text-black dark:text-white;
@@ -11,7 +10,7 @@
   border-radius: 20px;
 }
 
-.carousel-slides {
+.carousel-items {
   display: flex;
   transition: transform 0.6s ease-in-out;
   height: 100%;
@@ -22,9 +21,13 @@
   height: 100%;
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: center 70%;
   display: flex;
   align-items: center;
+}
+
+.carousel-slide:active {
+  cursor: grabbing;
 }
 
 .carousel-content {
@@ -33,10 +36,10 @@
   align-items: end;
   padding: 15px 30px;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
-.carousel-text{
+.carousel-text {
   display: flex;
   flex-direction: column;
   text-align: end;
@@ -66,7 +69,6 @@
   display: flex;
   align-items: center;
   gap: clamp(6px, 1.5vw, 12px);
-  color: black;
   font-size: clamp(10px, 1.2vw, 14px);
 }
 
@@ -75,7 +77,6 @@
   font-weight: bold;
   padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
   border-radius: 50px;
-  cursor: pointer;
   white-space: nowrap;
 }
 
@@ -139,18 +140,42 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: clamp(2px, 1vw, 5px);
 }
 
 .carousel-tech-bg {
   @apply bg-[#eee]/50 dark:bg-[#111]/50;
+  display: flex;
+  align-items: center;
   justify-content: center;
   backdrop-filter: blur(8px);
-  padding: clamp(1px, 1vw, 5px);
+  padding: clamp(1px, 2vw, 5px);
   border-radius: 20px;
+  transition: background 0.3s ease;
+  position: relative;
+  cursor: pointer;
 }
 
 .carousel-tech-icon {
   width: clamp(6px, 2vw, 20px);
   height: clamp(6px, 2vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-tech-label {
+  position: absolute;
+  left: 100%;
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-family: "CalSans";
+  white-space: nowrap;
+}
+
+.carousel-tech-bg:hover .carousel-tech-label {
+  opacity: 1;
+  transform: translateX(0);
 }

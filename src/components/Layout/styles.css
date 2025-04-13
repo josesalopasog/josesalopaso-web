@@ -2,16 +2,20 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 main {
+  flex: 1 0 auto;
+  
+  overflow-y: hidden;
   display: flex;
   justify-content: center;
   padding: 10px;
-  position:relative;
-  margin-top: clamp(60px, 9vw, 70px); 
+  position: relative;
+  margin-top: clamp(60px, 9vw, 70px);
 }
 
+/* Contenido principal organizado en grid */
 .main-content {
   display: grid;
-  grid-template-columns: minmax(200px, 400px) 1fr;
+  grid-template-columns: 1fr auto;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "hero projects"
@@ -23,9 +27,10 @@ main {
   margin: 0 auto;
 }
 
+/* Áreas del grid */
 .hero-section {
   grid-area: hero;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -37,17 +42,18 @@ main {
   grid-area: contact;
 }
 
-.projects-section{
-  align-items: center;
+.projects-section {
   grid-area: projects;
+  align-items: center;
 }
 
-.skills-section{
-  align-items: center;
+.skills-section {
   grid-area: skills;
+  align-items: center;
   overflow: hidden;
 }
 
+/* Estilos comunes para las secciones */
 .hero-section,
 .profile-section,
 .about-me-section,
@@ -64,11 +70,13 @@ main {
   align-items: left;
 }
 
-.hero-section{
+/* Estilo específico del Hero */
+.hero-section {
   align-items: left;
-  text-align:center;
+  text-align: center;
 }
 
+/* Scroll personalizado (aunque no se usará en main, puede ser útil para subcomponentes) */
 .main-section::-webkit-scrollbar {
   width: 6px;
 }
@@ -77,7 +85,8 @@ main {
   border-radius: 3px;
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 1000px) {
   .main-content {
     grid-template-columns: minmax(100px, 150px) 1fr;
     grid-template-areas:

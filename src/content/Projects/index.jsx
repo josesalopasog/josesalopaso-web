@@ -5,10 +5,7 @@ import decimetrixImg from "../../assets/images/decimetrix-assets-mockup.webp";
 import mercadofakeImg from "../../assets/images/mercadofake-mockup.webp";
 import cyberjsImg from "../../assets/images/ui-cyberjs-mockup.webp";
 import jsPortfolioImg from "../../assets/images/josesalopaso-portfolio-mockup.webp";
-import managementImg from "../../assets/images/img-management-systems.webp";
-import ecommerceImg from "../../assets/images/img-ecommerce.webp";
-import utilsImg from "../../assets/images/img-utils.webp";
-import portfoliosImg from "../../assets/images/img-portfolios.webp"
+import otherProjectsImg from "../../assets/images/other-projects-mockup.webp";
 import { AxiosIcon, CssIcon, ExpressJsIcon, Html5Icon, JavascriptIcon, JwtIcon, MongoDBIcon, NodeJsIcon, ReactIcon, ReduxIcon, SocketIoIcon, TailwindCssIcon } from "../../assets/icons";
 
 const managementSystemSlides = [
@@ -16,16 +13,26 @@ const managementSystemSlides = [
         image: decimetrixImg,
         title: "Decimetrix Assets",
         subtitle: "Manage company assets and locate them on a map.",
-        techs: [<MongoDBIcon />, <ExpressJsIcon /> , <ReactIcon />, <NodeJsIcon />,<AxiosIcon />,<ReduxIcon />, <TailwindCssIcon />, <JwtIcon />, <SocketIoIcon />,],
+        techs: [
+            { icon: <MongoDBIcon />, label: "MongoDB" },
+            { icon: <ExpressJsIcon />, label: "Express.js" },
+            { icon: <ReactIcon />, label: "React" },
+            { icon: <NodeJsIcon />, label: "Node.js" },
+            { icon: <AxiosIcon />, label: "Axios" },
+            { icon: <ReduxIcon />, label: "Redux" },
+            { icon: <TailwindCssIcon />, label: "Tailwind CSS" },
+            { icon: <JwtIcon />, label: "JWT" },
+            { icon: <SocketIoIcon />, label: "Socket.IO" },
+        ],
         tagProject: "Management Systems",
         webURL: "https://decimetrix-assets.netlify.app/",
         repURL: "https://github.com/josesalopasog/decimetrix-assets"
     },
     {
-        image: managementImg,
-        title: "Others",
-        subtitle: "See others in my github",
-        techs:[],
+        image: otherProjectsImg,
+        title: "Wanna see more?",
+        subtitle: "Check out more of my projects on GitHub.",
+        techs: [],
         tagProject: "Management Systems",
         webURL: "https://github.com/josesalopasog",
         repURL: "https://github.com/josesalopasog?tab=repositories"
@@ -36,17 +43,23 @@ const eCommerceSlides = [
     {
         image: mercadofakeImg,
         title: "Mercadofake",
-        subtitle: "An web clone attempt of Mercado Libre",
-        techs: [<ReactIcon />, <TailwindCssIcon />, <JavascriptIcon />, <CssIcon />, <Html5Icon /> ],
-        tagProject: "E-commerces",
+        subtitle: "A web clone attempt of Mercado Libre",
+        techs: [
+            { icon: <ReactIcon />, label: "React" },
+            { icon: <TailwindCssIcon />, label: "Tailwind CSS" },
+            { icon: <JavascriptIcon />, label: "JavaScript" },
+            { icon: <CssIcon />, label: "CSS" },
+            { icon: <Html5Icon />, label: "HTML5" },
+        ],
+        tagProject: "E-commerce",
         webURL: "https://josesalopasog.github.io/mercadofake-web/",
         repURL: "https://github.com/josesalopasog/mercadofake-web"
     },
     {
-        image: ecommerceImg,
-        title: "Others",
-        subtitle: "See others in my github",
-        techs:[""],
+        image: otherProjectsImg,
+        title: "Wanna see more?",
+        subtitle: "Check out more of my projects on GitHub.",
+        techs: [],
         tagProject: "Utils",
         webURL: "https://github.com/josesalopasog",
         repURL: "https://github.com/josesalopasog?tab=repositories"
@@ -58,16 +71,22 @@ const utilsSlides = [
         image: cyberjsImg,
         title: "CyberJS - Ui",
         subtitle: "Un proyecto para gestión de activos",
-        techs: [<ReactIcon />, <TailwindCssIcon />, <JavascriptIcon />, <CssIcon />, <Html5Icon /> ],
+        techs: [
+            { icon: <ReactIcon />, label: "React" },
+            { icon: <TailwindCssIcon />, label: "Tailwind CSS" },
+            { icon: <JavascriptIcon />, label: "JavaScript" },
+            { icon: <CssIcon />, label: "CSS" },
+            { icon: <Html5Icon />, label: "HTML5" },
+        ],
         tagProject: "Utils",
         webURL: "https://ui-cyberjs.netlify.app/",
         repURL: "https://github.com/josesalopasog/ui-cyberjs-web"
     },
     {
-        image: utilsImg,
-        title: "Others",
-        subtitle: "See others in my github",
-        techs:[""],
+        image: otherProjectsImg,
+        title: "Wanna see more?",
+        subtitle: "Check out more of my projects on GitHub.",
+        techs: [],
         tagProject: "Utils",
         webURL: "https://github.com/josesalopasog",
         repURL: "https://github.com/josesalopasog?tab=repositories"
@@ -79,16 +98,22 @@ const portfoliosSlides = [
         image: jsPortfolioImg,
         title: "My Portfolio",
         subtitle: "Un proyecto para gestión de activos",
-        techs: [<ReactIcon />, <TailwindCssIcon />, <JavascriptIcon />, <CssIcon />, <Html5Icon /> ],
+        techs: [
+            { icon: <ReactIcon />, label: "React" },
+            { icon: <TailwindCssIcon />, label: "Tailwind CSS" },
+            { icon: <JavascriptIcon />, label: "JavaScript" },
+            { icon: <CssIcon />, label: "CSS" },
+            { icon: <Html5Icon />, label: "HTML5" },
+        ],
         tagProject: "Portfolios",
         webURL: "https://josesalopaso.netlify.app/",
         repURL: "https://github.com/josesalopasog/josesalopaso-web"
     },
     {
-        image: portfoliosImg,
-        title: "Others",
-        subtitle: "See others in my github",
-        techs:[""],
+        image: otherProjectsImg,
+        title: "Wanna see more?",
+        subtitle: "Check out more of my projects on GitHub.",
+        techs: [],
         tagProject: "Portfolios",
         webURL: "https://github.com/josesalopasog",
         repURL: "https://github.com/josesalopasog?tab=repositories"
@@ -102,18 +127,18 @@ const Projects = () => {
             <div className="projects-section-container">
                 <div className="carousels-container">
                     <div className="carousel-wrapper">
-                        <CarouselProjects slides={managementSystemSlides} />
+                        <CarouselProjects items={managementSystemSlides} />
                     </div>
                     <div className="carousel-wrapper">
-                        <CarouselProjects slides={eCommerceSlides} />
+                        <CarouselProjects items={eCommerceSlides} />
                     </div>
                 </div>
                 <div className="carousels-container">
                     <div className="carousel-wrapper">
-                        <CarouselProjects slides={utilsSlides} />
+                        <CarouselProjects items={utilsSlides} />
                     </div>
                     <div className="carousel-wrapper">
-                        <CarouselProjects slides={portfoliosSlides} />
+                        <CarouselProjects items={portfoliosSlides} />
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import { AcademicCapIcon, BriefCaseIcon, MapPinIcon } from "../../assets/icons";
+import GradientText from "../../components/GradientText";
 
 import "./styles.css";
 
@@ -19,6 +20,9 @@ const Profile = () => {
                     <span><MapPinIcon className="profile-icons" /></span>
                     <span>Bogotá, Colombia</span>
                 </p>
+            </div>
+            <div className="profile-quote">
+                <GradientText>+3 years of work experience</GradientText>
             </div>
         </>
     );

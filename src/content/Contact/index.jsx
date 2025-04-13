@@ -1,4 +1,5 @@
 import { ArrowTopRightIcon, GithubIcon, GmailIcon, LinkedinIcon } from "../../assets/icons";
+import GradientText from "../../components/GradientText";
 import "./styles.css";
 
 const Contact = () => {
@@ -6,7 +7,9 @@ const Contact = () => {
         <>
             <h1>Let's Chat</h1>
             <div className="contact-container">
-                <p>If you want to work with me, reach me at:</p>
+                <div className="contact-quote">
+                    <GradientText>Reach me at:</GradientText>
+                </div>
                 <div className="contact-buttons-container">
                     <a href="https://github.com/josesalopasog" className="contact-button-container github-button" target='_blank'>
                         <GithubIcon className="contact-icon" />
@@ -19,7 +22,9 @@ const Contact = () => {
                         <ArrowTopRightIcon className="contact-icon" />
                     </a>
                 </div>
-                <p>Or mail me:</p>
+                <div className="contact-quote">
+                    <GradientText>Or mail me:</GradientText>
+                </div>
                 <div className="contact-buttons-container">
                     <a
                         href="mailto:josesalopaso@gmail.com?subject=Let's%20talk%20about%20work&body=Mensaje%20predefinido"
