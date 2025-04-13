@@ -11,13 +11,13 @@ main {
 
 .main-content {
   display: grid;
-  grid-template-columns: minmax(200px, 350px) 1fr;
+  grid-template-columns: minmax(200px, 400px) 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
-    "hero skills"
+    "hero projects"
     "profile projects"
     "about projects"
-    "contact projects";
+    "contact skills";
   gap: 10px;
   width: 100%;
   margin: 0 auto;
@@ -83,8 +83,8 @@ main {
     grid-template-areas:
       "hero profile"
       "about about"
-      "skills skills"
       "projects projects"
+      "skills skills"
       "contact contact";
   }
 

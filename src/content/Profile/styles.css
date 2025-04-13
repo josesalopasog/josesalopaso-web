@@ -1,7 +1,19 @@
 .profile-info-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: clamp(8px, 1vw, 16px);
-    margin: 20px 0px;
-  }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: clamp(8px, 1vw, 16px);
+  margin: 20px 0px;
+}
+
+.profile-text {
+  display: flex;
+  gap: clamp(8px, 1vw, 16px);
+  align-items: center;
+}
+
+.profile-icons {
+  width: clamp(12px, 3vw, 34px);
+}

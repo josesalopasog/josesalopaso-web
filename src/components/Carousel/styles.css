@@ -5,10 +5,7 @@
   @apply text-black dark:text-white;
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  height: 20vw; 
-  min-height: 200px;
-  max-height: 400px;
+  aspect-ratio: 16 / 9;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 20px;
@@ -21,50 +18,46 @@
 }
 
 .carousel-slide {
-  @apply bg-white dark:bg-black;
   min-width: 100%;
-  position: relative;
   height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
 }
 
 .carousel-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: end;
+  padding: 15px 30px;
   width: 100%;
-  height: 100%;
+  height:100%;
 }
 
-.carousel-image {
-  position: relative;
-  width: 50%;
-}
-
-.carousel-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-}
-
-.carousel-text {
-  @apply bg-[#eee] dark:bg-[#111];
-  width: 50%;
-  backdrop-filter: blur(8px);
+.carousel-text{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 32px;
-  font-size: clamp(10px, 1.2vw, 14px);
+  text-align: end;
+  align-items: end;
+  color: white;
+}
+
+.carousel-text h2 {
+  text-align: end;
+  font-weight: bold;
 }
 
 .carousel-text p {
+  width: 40%;
   margin-top: 10px;
 }
 
 .carousel-caption {
   @apply bg-white/50 dark:bg-black/50;
   position: absolute;
-  bottom: clamp(25px, 2vw, 35px);
+  bottom: clamp(20px, 2vw, 25px);
   left: 50%;
   transform: translateX(-50%);
   backdrop-filter: blur(8px);
@@ -79,7 +72,6 @@
 
 .caption-tag {
   @apply bg-white dark:bg-black;
-  color: white;
   font-weight: bold;
   padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
   border-radius: 50px;
@@ -96,22 +88,16 @@
   @apply text-black dark:text-white;
   width: clamp(14px, 2vw, 20px);
   height: clamp(14px, 2vw, 20px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.caption-button:hover {
+  transform: scale(1.1);
 }
 
 .carousel-control {
-  @apply text-[#BD34FE]  dark:text-[#00e1ff];
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  @apply text-black dark:text-white;
   cursor: pointer;
-}
-
-.carousel-control.left {
-  left: clamp(6px, 1vw, 8px);
-}
-
-.carousel-control.right {
-  right: clamp(6px, 1vw, 8px);
 }
 
 .icon {
@@ -122,7 +108,6 @@
 
 .icon:hover {
   transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
 }
 
 .carousel-dots {
@@ -144,4 +129,28 @@
 
 .dot.active {
   @apply bg-black dark:bg-white;
+}
+
+.carousel-techs-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.carousel-tech-bg {
+  @apply bg-[#eee]/50 dark:bg-[#111]/50;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  padding: clamp(1px, 1vw, 5px);
+  border-radius: 20px;
+}
+
+.carousel-tech-icon {
+  width: clamp(6px, 2vw, 20px);
+  height: clamp(6px, 2vw, 20px);
 }

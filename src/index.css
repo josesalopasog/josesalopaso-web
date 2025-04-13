@@ -27,26 +27,36 @@
 
 html{
   @apply bg-white text-black dark:bg-black dark:text-white;
-  transition: background-color 0.5s ease, color 1s ease;
 }
 html,
 body {
   margin: 0px;
   padding: 0px;
   font-family: Roboto;
-  font-size: clamp(8px, 2vw, 20px);
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
   scroll-padding-bottom: 100px;
 }
 
+body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+}
+
 h1{
-  font-size: clamp(10px, 2vw, 22px);
+  font-size: clamp(1.25rem, 1.5vw, 3.5rem);
   font-family: "CalSans";
 }
 
 h2{
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(1.25rem, 1.5vw, 3.25rem);
+  font-family: "CalSans";
+}
+
+h3{
+  font-size: clamp(1rem, 1.5vw, 3rem);
   font-family: "CalSans";
 }
 

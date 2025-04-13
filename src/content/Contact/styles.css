@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+.contact-container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 100%;
+    gap:10px
+}
+
 .contact-buttons-container{
     display:flex;
     margin: 10px 0px;
@@ -13,7 +21,7 @@
     align-items: center;
     justify-content: center; 
     gap: clamp(2px, 2vw, 8px);
-    padding: clamp(2px, 1vw, 6px) clamp(5px, 3vw, 10px);
+    padding: clamp(2px, 1vw, 4px) clamp(5px, 3vw, 10px);
     border-radius: 25px;
     cursor: pointer;
     color: white;
@@ -44,6 +52,6 @@
   }
 
 .contact-icon{
-    width: clamp(12px, 3vw, 26px);
-    height: clamp(12px, 3vw, 26px);
+    width: clamp(12px, 3vw, 24px);
+    height: clamp(12px, 3vw, 24px);
 }

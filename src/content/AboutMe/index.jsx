@@ -3,8 +3,8 @@ import "./styles.css"
 const AboutMe = () => {
     return (
         <>
+            <h1>About Me</h1>
             <div className="about-me-container">
-                <h1>About Me</h1>
                 <p>
                     I am an electronic engineer and software developer, 
                     passionate about the world of programming. Currently, 

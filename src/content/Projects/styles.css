@@ -1,9 +1,11 @@
 .projects-section-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16px;
+  height: 100%;
+  
 }
 
 .carousels-container {
@@ -22,5 +24,6 @@
 @media (max-width: 640px) {
   .carousel-wrapper {
     flex: 1 1 100%;
+    padding: 16px 5px;
   }
 }
