@@ -173,9 +173,16 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   font-family: "CalSans";
   white-space: nowrap;
+  font-size: clamp(0.7rem, 1vw, 1.5rem);
 }
 
 .carousel-tech-bg:hover .carousel-tech-label {
   opacity: 1;
   transform: translateX(0);
+
 }
+
+.carousel-tech-bg:hover {
+  transform: scale(1.1);  
+}
+

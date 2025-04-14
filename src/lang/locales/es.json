@@ -21,23 +21,23 @@
     "projects": {
         "title": "Proyectos",
         "decimetrix": {
-          "title": "Decimetrix Assets",
+          "title": "CyberJS - Assets",
           "subtitle": "Gestiona los activos de la empresa y localízalos en un mapa.",
           "tag": "Sistemas de gestión"
         },
         "mercadofake": {
           "title": "Mercadofake",
-          "subtitle": "Un intento de clon web de Mercado Libre",
+          "subtitle": "Un intento de clon web de Mercado Libre.",
           "tag": "E-commerce"
         },
         "cyberjs": {
           "title": "CyberJS - Ui",
-          "subtitle": "Un proyecto con mis componentes UI",
+          "subtitle": "Un proyecto con mis componentes UI.",
           "tag": "Herramientas"
         },
         "portfolio": {
           "title": "Mi Portafolio",
-          "subtitle": "Mi primera versión del portafolio",
+          "subtitle": "Mi primera versión del portafolio.",
           "tag": "Portafolios"
         },
         "more": {
@@ -58,7 +58,7 @@
         "body": "Mensaje predefinido"
     },
     "footer": {
-        "madeWith": "¡ Hecho con",
+        "madeWith": "¡ Hecho con el",
         "byMe": "por mí !"
     }
 }

@@ -21,23 +21,23 @@
     "projects": {
         "title": "Projects",
         "decimetrix": {
-          "title": "Decimetrix Assets",
+          "title": "CyberJS - Assets",
           "subtitle": "Manage company assets and locate them on a map.",
           "tag": "Management Systems"
         },
         "mercadofake": {
           "title": "Mercadofake",
-          "subtitle": "A web clone attempt of Mercado Libre",
+          "subtitle": "A web clone attempt of Mercado Libre.",
           "tag": "E-commerce"
         },
         "cyberjs": {
           "title": "CyberJS - Ui",
-          "subtitle": "A project with my Ui components",
+          "subtitle": "A project with my Ui components.",
           "tag": "Utils"
         },
         "portfolio": {
           "title": "My Portfolio",
-          "subtitle": "My first version of portfolio",
+          "subtitle": "My first version of portfolio.",
           "tag": "Portfolios"
         },
         "more": {
