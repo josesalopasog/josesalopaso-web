@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { HeartIcon } from "../../assets/icons";
+import { HeartIcon } from "../../icons";
 
 import "./styles.css";
 

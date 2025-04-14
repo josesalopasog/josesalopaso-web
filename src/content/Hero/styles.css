@@ -10,6 +10,7 @@
 
 .icon-logo{
     width: clamp(100px, 20vw, 180px);
+    height: clamp(100px, 20vw, 180px);
 }
 
 .hero-quote{

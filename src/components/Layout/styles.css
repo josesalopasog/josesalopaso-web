@@ -84,7 +84,26 @@ main {
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1650px) {
+  .main-content {
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas:
+      "hero profile about"
+      "projects projects projects"
+      "contact skills skills"
+  }
+
+  .hero-section,
+  .profile-section,
+  .about-me-section,
+  .contact-section,
+  .projects-section,
+  .skills-section {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1270px) {
   .main-content {
     grid-template-columns: minmax(100px, 150px) 1fr;
     grid-template-areas:

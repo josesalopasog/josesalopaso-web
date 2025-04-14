@@ -1,15 +1,9 @@
-.toggle-lang-btn-container{
-    display:flex;
-    flex-direction: column;
-}
-
-.toggle-lang-btn{
+.lang-toggle-btn{
     cursor: pointer;
-    width: clamp(28px, 5vw, 34px);
     transition: transform 0.1s;
 }
 
-.toggle-lang-btn:hover {
+.lang-toggle-btn:hover {
     transform: scale(1.1);
     transition: transform 0.1s;
 }

@@ -11,7 +11,7 @@ const InfiniteSlider = ({ items = [] }) => {
             key={index}
             style={{ '--glow-color': item.color }}
           >
-            <span className="slider-icon">{item.icon}</span>
+            <svg className="slider-icon">{item.icon}</svg>
             <span className="slider-label">{item.label}</span>
           </div>
         ))}

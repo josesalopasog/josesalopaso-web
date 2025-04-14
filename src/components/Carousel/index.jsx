@@ -4,7 +4,7 @@ import {
   ChevronLeftIcon,
   GithubIcon,
   ArrowTopRightIcon,
-} from "../../assets/icons";
+} from "../../icons";
 import PropTypes from "prop-types";
 
 import "./styles.css";
@@ -68,7 +68,7 @@ const CarouselProjects = ({ items = [], className = "" }) => {
               <div className="carousel-techs-container">
                 {slide.techs.map((tech, index) => (
                   <div key={index} className="carousel-tech-bg">
-                    <div className="carousel-tech-icon">{tech.icon}</div>
+                    <svg className="carousel-tech-icon">{tech.icon}</svg>
                     <span className="carousel-tech-label">{tech.label}</span>
                   </div>
                 ))}

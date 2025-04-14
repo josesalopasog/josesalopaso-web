@@ -1,12 +1,9 @@
 .theme-toggle-btn {
-  transition: color 0.3s ease-in-out;
-}
-
-.theme-toggle-icon {
   cursor: pointer;
   transition: transform 0.3s, color 0.3s;
 }
 
-.theme-toggle-icon:hover {
+.theme-toggle-btn:hover {
   transform: scale(1.1);
+  transition: transform 0.1s; 
 }
