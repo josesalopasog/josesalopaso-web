@@ -37,10 +37,9 @@ const Header = () => {
         </ul>
       </nav>
       <div className="header-third-column">
-        <LanguageSwitcher className="header-lang-button" />
-        <ThemeButton className="header-theme-button" />
-        <DropdownMenuButton className="header-menu-button"
-        />
+        <LanguageSwitcher className="header-lang-button"/>
+        <ThemeButton className="header-theme-button"/>
+        <DropdownMenuButton className="header-menu-button"/>
       </div>
     </header>
   );

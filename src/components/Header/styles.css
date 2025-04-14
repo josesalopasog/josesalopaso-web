@@ -75,6 +75,7 @@ header {
 .header-theme-button,
 .header-menu-button {
   width: clamp(28px, 5vw, 34px);
+  height: clamp(28px, 5vw, 34px);
 }
 
 .header-menu-button {
