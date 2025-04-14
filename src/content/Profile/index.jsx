@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { AcademicCapIcon, BriefCaseIcon, MapPinIcon } from "../../assets/icons";
+import { AcademicCapIcon, BriefCaseIcon, MapPinIcon } from "../../icons";
 import GradientText from "../../components/GradientText";
 
 import "./styles.css";

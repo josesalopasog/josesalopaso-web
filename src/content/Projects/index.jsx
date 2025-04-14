@@ -6,7 +6,7 @@ import mercadofakeImg from "../../assets/images/mercadofake-mockup.webp";
 import cyberjsImg from "../../assets/images/ui-cyberjs-mockup.webp";
 import jsPortfolioImg from "../../assets/images/josesalopaso-portfolio-mockup.webp";
 import otherProjectsImg from "../../assets/images/other-projects-mockup.webp";
-import { AxiosIcon, CssIcon, ExpressJsIcon, Html5Icon, JavascriptIcon, JwtIcon, MongoDBIcon, NodeJsIcon, ReactIcon, ReduxIcon, SocketIoIcon, TailwindCssIcon } from "../../assets/icons";
+import { AxiosIcon, CssIcon, ExpressJsIcon, Html5Icon, JavascriptIcon, JwtIcon, MongoDBIcon, NodeJsIcon, ReactIcon, ReduxIcon, SocketIoIcon, TailwindCssIcon } from "../../icons";
 
 const Projects = () => {
     const { t } = useTranslation();

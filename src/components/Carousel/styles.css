@@ -4,6 +4,7 @@
   @apply text-black dark:text-white;
   position: relative;
   width: 100%;
+  min-width: 450px;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
   overflow: hidden;
@@ -12,8 +13,8 @@
 
 .carousel-items {
   display: flex;
-  transition: transform 0.6s ease-in-out;
   height: 100%;
+  transition: transform 0.6s ease-in-out;
 }
 
 .carousel-slide {
@@ -122,8 +123,8 @@
 
 .dot {
   @apply bg-black/50 dark:bg-white/50;
-  height: clamp(8px, 1vw, 10px);
-  width: clamp(8px, 1vw, 10px);
+  height: clamp(4px, 2vw, 8px);
+  width: clamp(4px, 2vw, 8px);
   border-radius: 100%;
   cursor: pointer;
 }
@@ -157,8 +158,8 @@
 }
 
 .carousel-tech-icon {
-  width: clamp(6px, 2vw, 20px);
-  height: clamp(6px, 2vw, 20px);
+  width: clamp(8px, 2vw, 20px);
+  height: clamp(8px, 2vw, 20px);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { ReactIcon, TailwindCssIcon, NodeJsIcon, MongoDBIcon, PostgreSqlICon, ReduxIcon, AxiosIcon, JavascriptIcon, CssIcon, Html5Icon, TypescriptIcon, ExpressJsIcon, JwtIcon, SocketIoIcon, DockerIcon, PostmanIcon, GithubIcon, GitIcon, VsCodeIcon, PowerBiIcon } from "../../assets/icons";
+import { ReactIcon, TailwindCssIcon, NodeJsIcon, MongoDBIcon, PostgreSqlICon, ReduxIcon, AxiosIcon, JavascriptIcon, CssIcon, Html5Icon, TypescriptIcon, ExpressJsIcon, JwtIcon, SocketIoIcon, DockerIcon, PostmanIcon, GithubIcon, GitIcon, VsCodeIcon, PowerBiIcon } from "../../icons";
 import GradientText from "../../components/GradientText";
 import InfiniteSlider from "../../components/InfiniteSlider";
 import "./styles.css";

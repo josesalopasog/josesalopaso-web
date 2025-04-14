@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { ArrowTopRightIcon, GithubIcon, GmailIcon, LinkedinIcon } from "../../assets/icons";
+import { ArrowTopRightIcon, GithubIcon, GmailIcon, LinkedinIcon } from "../../icons";
 import GradientText from "../../components/GradientText";
 import "./styles.css";
 

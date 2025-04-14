@@ -3,7 +3,7 @@ import { useContext } from "react";
 //Context ⬇️
 import { AppContext } from "../../context/AppContext";
 //Assets ⬇️
-import { MoonIcon, SunIcon } from "../../assets/icons";
+import { MoonIcon, SunIcon } from "../../icons";
 //Styles ⬇️
 import "./styles.css";
 

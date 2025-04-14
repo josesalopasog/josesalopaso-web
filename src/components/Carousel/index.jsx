@@ -4,7 +4,7 @@ import {
   ChevronLeftIcon,
   GithubIcon,
   ArrowTopRightIcon,
-} from "../../assets/icons";
+} from "../../icons";
 import PropTypes from "prop-types";
 
 import "./styles.css";
