@@ -12,7 +12,6 @@ main {
   margin-top: clamp(60px, 9vw, 70px);
 }
 
-/* Contenido principal organizado en grid */
 .main-content {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -27,7 +26,6 @@ main {
   margin: 0 auto;
 }
 
-/* Áreas del grid */
 .hero-section {
   grid-area: hero;
   display: flex;

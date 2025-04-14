@@ -10,7 +10,10 @@
 
 .slider-track {
   display: flex;
-  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px 10px;
 }
 
 .slider-item {
@@ -18,7 +21,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 20px;
+  padding: 0px 10px;
   white-space: nowrap;
   cursor: pointer;
   transition: transform 0.1s ease-in-out, text-shadow 0.3s ease-in-out;
@@ -32,12 +35,13 @@
   align-items: center;
 }
 
-.slider-item:hover  {
+.slider-item:hover,
+.slider-item:active{
   transition: transform 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
   text-shadow:
     0 0 4px var(--glow-color),
-    0 0 8px var(--glow-color),
-    0 0 12px var(--glow-color);
+    0 0 6px var(--glow-color),
+    0 0 8px var(--glow-color);
   transform: scale(1.1);
 }
 

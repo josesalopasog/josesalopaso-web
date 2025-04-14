@@ -5,6 +5,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   animation: gradient-text 6s linear infinite;
+  padding: 5px;
 }
 
 @keyframes gradient-text {
