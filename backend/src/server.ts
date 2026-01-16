@@ -1,16 +1,14 @@
 import cors from 'cors'; 
-import dotenv from 'dotenv';
 import express from 'express'; 
-import path from 'path';
 import { createServer } from "http";
 import { Server as SocketIOServer } from 'socket.io';
 
+import authRoutes from './routes/auth.routes';
 
-dotenv.config({ path: path.resolve(__dirname, '../.env') });
+import { config } from './config/env';
 
 const app = express(); 
 const server = createServer(app);
-const PORT = process.env.PORT || 5000;
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || []; 
 const io = new SocketIOServer(server, { //Create a SocketIO server
     cors: {
@@ -30,10 +28,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
 //Routes
-// app.use("api/users", userRoutes); 
+app.use("api/users", authRoutes); 
 
-server.listen(PORT, () => {
-    console.log(`✅ Server is running on port ${PORT}`);
+server.listen(config.port, () => {
+    console.log(`✅ Server is running on port ${config.port}`);
 });
 
 export { io };
