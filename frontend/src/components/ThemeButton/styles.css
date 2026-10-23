@@ -1,0 +1,9 @@
+.theme-toggle-icon {
+  width: 22px;
+  height: 22px;
+  color: #e0457b;
+}
+
+.dark .theme-toggle-icon {
+  color: #b48cff;
+}

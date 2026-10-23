@@ -1,0 +1,84 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 68px;
+  padding: 0 var(--gutter);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform: translateY(-100%);
+  transition: transform 0.6s var(--ease-out), background-color 0.4s ease;
+}
+
+.site-header.is-visible {
+  transform: translateY(0);
+}
+
+.site-header-brand {
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+}
+
+.site-header-links {
+  display: flex;
+  gap: clamp(16px, 2.4vw, 32px);
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+}
+
+.site-header-links a {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.site-header-links a:hover {
+  opacity: 1;
+}
+
+.site-header-menu-button {
+  display: none;
+}
+
+/* On phones the hero hides its nav, so the bar (with the menu) is always there */
+@media (max-width: 768px) {
+  .site-header {
+    transform: none;
+    background: transparent;
+    border-bottom-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .site-header .site-header-brand {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .site-header.is-visible {
+    background: color-mix(in srgb, var(--bg) 72%, transparent);
+    border-bottom-color: var(--line);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .site-header.is-visible .site-header-brand {
+    opacity: 1;
+  }
+
+  .site-header-links {
+    display: none;
+  }
+
+  .site-header-menu-button {
+    display: flex;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,279 @@
+{
+    "header": {
+        "aboutMe": "Sobre mí",
+        "projects": "Proyectos",
+        "skills": "Habilidades",
+        "contact": "Contacto"
+    },
+    "aboutMe": {
+        "title": "Hola, soy José",
+        "description": "Soy desarrollador web fullstack e ingeniero electrónico en Bogotá. Convierto ideas en sitios y aplicaciones web rápidas, atractivas y pensadas para vender, desde la primera línea de código hasta el lanzamiento. Trabajo de cerca contigo, con comunicación clara en cada etapa, para que tu proyecto crezca en internet.",
+        "quote": "¿Tienes una idea? Hagámosla realidad"
+    },
+    "profile": {
+        "availability": "Disponible para proyectos freelance",
+        "role": "Desarrollador Web Fullstack · Ingeniero Electrónico",
+        "university": "Universidad Sergio Arboleda",
+        "location": "Bogotá, Colombia"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "decimetrix": {
+            "title": "CyberJS - Assets",
+            "subtitle": "Gestiona los activos de la empresa y localízalos en un mapa.",
+            "tag": "Sistemas de gestión"
+        },
+        "cyberjs": {
+            "title": "CyberJS - Ui",
+            "subtitle": "Un proyecto con mis componentes UI.",
+            "tag": "Herramientas"
+        },
+        "eyebrow": "Trabajo destacado",
+        "code": "Ver código",
+        "watch": "Visitar sitio",
+        "iter412": {
+            "title": "Iter 4.12",
+            "subtitle": "Sitio web para un grupo de retiros juveniles en Bogotá: retiros, cronograma de reuniones e inscripciones.",
+            "tag": "Landing Page"
+        }
+    },
+    "skills": {
+        "title": "Stack · Habilidades",
+        "quote1": "¿Necesitas una tecnología que no está aquí?",
+        "quote2": "Escríbeme: aprendo rápido y te lo demuestro.",
+        "eyebrow": "03 · Lo que hago",
+        "intro": "Desarrollo aplicaciones web completas con el stack MERN (MongoDB, Express, React y Node.js), de la base de datos a la interfaz. Además soy ingeniero electrónico, edito video y manejo redes sociales: un solo aliado para tu producto y para el contenido que lo hace crecer.",
+        "groups": [
+            {
+                "title": "Stack MERN",
+                "items": [
+                    "MongoDB",
+                    "Express.js",
+                    "React",
+                    "Node.js",
+                    "JavaScript",
+                    "TypeScript",
+                    "Redux",
+                    "Tailwind CSS",
+                    "Socket.io",
+                    "JWT",
+                    "APIs REST",
+                    "PostgreSQL"
+                ]
+            },
+            {
+                "title": "Electrónica",
+                "items": [
+                    "Diseño de circuitos",
+                    "Diseño de PCB",
+                    "Arduino",
+                    "ESP32 y microcontroladores",
+                    "IoT",
+                    "Sensores e instrumentación"
+                ]
+            },
+            {
+                "title": "Edición de video",
+                "items": [
+                    "Adobe Premiere Pro",
+                    "After Effects",
+                    "DaVinci Resolve",
+                    "CapCut",
+                    "Reels y video corto"
+                ]
+            },
+            {
+                "title": "Redes sociales",
+                "items": [
+                    "Estrategia de contenido",
+                    "Instagram y TikTok",
+                    "Meta Business Suite",
+                    "Canva",
+                    "Analítica y reportes"
+                ]
+            },
+            {
+                "title": "Herramientas",
+                "items": [
+                    "Git y GitHub",
+                    "Docker",
+                    "Postman",
+                    "VS Code",
+                    "Figma",
+                    "Power BI"
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "¡Hablemos!",
+        "eyebrow": "04 · Trabajemos juntos",
+        "intro": "Cuéntame tu idea a la izquierda o cotiza tu proyecto a la derecha: el precio se actualiza al instante. Te respondo en 24 a 48 horas, sin compromiso.",
+        "quote": {
+            "included": "Siempre incluido",
+            "types": {
+                "landing": {
+                    "name": "Landing page",
+                    "desc": "Una página para vender un producto, servicio o evento.",
+                    "includes": [
+                        "Diseño responsive",
+                        "Hasta 5 secciones",
+                        "Formulario de contacto o botón de WhatsApp",
+                        "SEO básico y carga rápida"
+                    ]
+                },
+                "portfolio": {
+                    "name": "Portafolio",
+                    "desc": "Muestra tu trabajo y consigue clientes.",
+                    "includes": [
+                        "Diseño responsive",
+                        "Inicio, sobre mí, proyectos y contacto",
+                        "Galería de proyectos",
+                        "SEO básico y carga rápida"
+                    ]
+                },
+                "management": {
+                    "name": "Sistema de gestión",
+                    "desc": "Una aplicación web para tu negocio: datos, usuarios y paneles.",
+                    "includes": [
+                        "Inicio de sesión y cuentas de usuario",
+                        "Panel de administración",
+                        "Crear, editar y eliminar registros",
+                        "Base de datos y API segura"
+                    ]
+                }
+            },
+            "features": {
+                "customDesign": {
+                    "name": "Diseño a medida en Figma",
+                    "desc": "Mockups únicos antes de programar"
+                },
+                "copywriting": {
+                    "name": "Redacción de textos",
+                    "desc": "Escribo los textos por ti"
+                },
+                "extraSections": {
+                    "name": "Secciones extra",
+                    "desc": "Más de 5 secciones"
+                },
+                "animations": {
+                    "name": "Animaciones avanzadas",
+                    "desc": "Efectos de scroll como este sitio"
+                },
+                "multilanguage": {
+                    "name": "Multi-idioma",
+                    "desc": "Español e inglés"
+                },
+                "seo": {
+                    "name": "SEO avanzado + analítica",
+                    "desc": "Google Analytics, Search Console, meta tags"
+                },
+                "booking": {
+                    "name": "Reservas o agenda",
+                    "desc": "Calendly, WhatsApp o similar"
+                },
+                "hosting": {
+                    "name": "Configuración de dominio y hosting",
+                    "desc": "Lo publico por ti"
+                },
+                "cms": {
+                    "name": "Contenido autoeditable (CMS)",
+                    "desc": "Actualiza proyectos sin código"
+                },
+                "blog": {
+                    "name": "Blog",
+                    "desc": "Artículos con categorías"
+                },
+                "themes": {
+                    "name": "Modo claro y oscuro",
+                    "desc": "Selector de tema"
+                },
+                "roles": {
+                    "name": "Roles y permisos",
+                    "desc": "Administradores, empleados, clientes..."
+                },
+                "reports": {
+                    "name": "Reportes y gráficas",
+                    "desc": "Paneles con indicadores"
+                },
+                "realtime": {
+                    "name": "Notificaciones en tiempo real",
+                    "desc": "Actualizaciones en vivo con Socket.io"
+                },
+                "maps": {
+                    "name": "Mapas y geolocalización",
+                    "desc": "Ubica activos o clientes"
+                },
+                "files": {
+                    "name": "Carga de archivos",
+                    "desc": "Imágenes, PDFs, documentos"
+                },
+                "exports": {
+                    "name": "Exportar a PDF / Excel",
+                    "desc": "Descarga tus datos"
+                },
+                "payments": {
+                    "name": "Pagos en línea",
+                    "desc": "Stripe, PayPal, Wompi..."
+                },
+                "integrations": {
+                    "name": "Integraciones con terceros",
+                    "desc": "APIs y servicios externos"
+                },
+                "pwa": {
+                    "name": "App instalable (PWA)",
+                    "desc": "Funciona como una app móvil"
+                }
+            },
+            "rush": "Entrega urgente",
+            "rushDesc": "Cerca de 30% más rápido (+25%)"
+        },
+        "form": {
+            "name": "Nombre (¿Quién eres?)",
+            "email": "Correo",
+            "phone": "Teléfono / WhatsApp (opcional)",
+            "message": "Cuéntame de tu proyecto",
+            "messagePlaceholder": "Para qué es, quién lo usará, algún sitio que te guste como referencia...",
+            "consent": "Acepto que me contacten sobre esta solicitud.",
+            "submit": "Enviar mensaje",
+            "sending": "Enviando...",
+            "success": "¡Gracias! Tu solicitud ya va en camino. Te respondo en 24 a 48 horas.",
+            "error": "Algo salió mal. Inténtalo de nuevo o escríbeme directamente al correo.",
+            "projectTitle": "Título del proyecto"
+        },
+        "mailCard": {
+            "eyebrow": "Escríbeme",
+            "title": "Cuéntame tu idea"
+        },
+        "quoteCard": {
+            "eyebrow": "Cotización",
+            "title": "Cotiza en segundos",
+            "priceLabel": "Aprox.",
+            "use": "Quiero esta cotización",
+            "attached": "Cotización adjunta: {{label}} · {{price}}",
+            "remove": "Quitar",
+            "note": "Precio de referencia, sin compromiso."
+        },
+        "socials": {
+            "title": "¿Prefieres redes? Escríbeme aquí"
+        }
+    },
+    "footer": {
+        "madeWith": "¡ Hecho con el",
+        "byMe": "por mí !"
+    },
+    "hero": {
+        "workWithMe": "Trabaja conmigo",
+        "tagline": "Hagamos tu idea realidad..."
+    },
+    "controls": {
+        "language": "Cambiar idioma",
+        "theme": "Cambiar tema",
+        "menu": "Abrir menú",
+        "top": "Volver arriba"
+    },
+    "seo": {
+        "title": "José Salopaso | Desarrollador Web Fullstack en Bogotá",
+        "description": "Desarrollador web fullstack en Bogotá: sitios rápidos, landing pages y aplicaciones web con React, Node.js y MongoDB. Cotiza al instante y te respondo en 24–48 h."
+    }
+}

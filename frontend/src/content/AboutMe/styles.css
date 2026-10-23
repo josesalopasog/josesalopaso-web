@@ -1,0 +1,171 @@
+/* Big pink-to-peach story text over a heavily dimmed sunset, like the VI "Vice City" block.
+   It starts one screen early (on top of the fading hero) and stays pinned while it fades in. */
+.about {
+  --about-pink: #ec6ea9;
+  --about-peach: #ffd3a3;
+  position: relative;
+  z-index: 1;
+  height: 220svh;
+  margin-top: -100svh;
+  pointer-events: none;
+}
+
+.about.is-visible {
+  pointer-events: auto;
+}
+
+.about-anchor {
+  position: absolute;
+  top: 75svh;
+  left: 0;
+}
+
+.about-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.about-backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+}
+
+.about-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(6px);
+  transform: scale(1.05);
+  opacity: 0.35;
+}
+
+.about-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 70%, var(--bg) 100%),
+    color-mix(in srgb, var(--bg) 78%, transparent);
+}
+
+.about-sticky {
+  /* The archer's box (the image is 2:3) drives where the text starts, so they never overlap */
+  /* Taller than the screen: the bow tip runs off the top, the legs stay on the bottom edge */
+  --archer-h: calc(min(110svh, 1250px) - 10px);
+  --archer-w: calc(var(--archer-h) * 2 / 3);
+  --archer-left: max(-40px, calc(50vw - 860px));
+}
+
+.about-archer {
+  position: absolute;
+  left: var(--archer-left);
+  bottom: 0;
+  height: var(--archer-h);
+  width: auto;
+  transform-origin: center bottom;
+  filter: drop-shadow(0 20px 40px rgba(5, 5, 15, 0.5));
+  pointer-events: none;
+}
+
+.about-copy {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--archer-left) + var(--archer-w) + 48px);
+  right: var(--gutter);
+  max-width: 720px;
+  translate: 0 -50%;
+}
+
+.about-title {
+  font-size: clamp(2.75rem, 5.6vw, 6rem);
+  color: var(--about-pink);
+  margin-bottom: clamp(20px, 3.5vh, 40px);
+  transform-origin: left center;
+}
+
+/* One gradient running top-to-bottom across the whole paragraph */
+.about-story {
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.5rem);
+  line-height: 1.24;
+  background: linear-gradient(180deg, var(--about-pink) 0%, var(--about-peach) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transform-origin: left center;
+}
+
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px clamp(24px, 3vw, 44px);
+  margin-top: clamp(28px, 5vh, 56px);
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  color: var(--about-peach);
+}
+
+.about-fact {
+  position: relative;
+}
+
+/* Thin dot between facts */
+.about-fact + .about-fact::before {
+  content: "•";
+  position: absolute;
+  left: calc(clamp(24px, 3vw, 44px) / -2);
+  translate: -50% 0;
+  color: var(--about-pink);
+}
+
+.about-cta {
+  display: inline-block;
+  margin-top: clamp(24px, 4vh, 40px);
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  color: var(--about-pink);
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, letter-spacing 0.4s var(--ease-out);
+}
+
+.about-cta:hover {
+  color: var(--about-peach);
+  letter-spacing: 0.02em;
+}
+
+/* Deeper tones so the text keeps its contrast on the cream light theme */
+html:not(.dark) .about {
+  --about-pink: #d6457f;
+  --about-peach: #e07a3f;
+}
+
+/* Phones and narrow tablets: text up top, archer standing on the bottom edge */
+@media (max-width: 900px) {
+  /* Small enough to stay below the text, standing on the bottom edge */
+  .about-archer {
+    left: -8%;
+    height: clamp(150px, calc(100svh - 580px), 34svh);
+  }
+
+  .about-copy {
+    top: 88px;
+    left: var(--gutter);
+    right: var(--gutter);
+    max-width: none;
+    translate: none;
+  }
+
+  .about-story {
+    font-size: clamp(1.15rem, 4.6vw, 1.6rem);
+  }
+
+  .about-facts {
+    font-size: 0.95rem;
+  }
+}

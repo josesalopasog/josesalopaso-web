@@ -1,0 +1,225 @@
+/* The section is taller than the screen so the sticky frame can play the scroll parallax */
+.hero {
+  position: relative;
+  height: 190svh;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--band);
+}
+
+.hero-sky {
+  position: absolute;
+  inset: 0 0 26% 0;
+  overflow: hidden;
+  transform-origin: 50% 70%;
+  z-index: 0;
+}
+
+.hero-sky img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* Big name ⬇️ */
+.hero-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7%;
+  z-index: 1; /* behind the character */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(4rem, 17vw, 20rem);
+  line-height: 0.86;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.hero-name-line {
+  display: block;
+  padding: 0.2em 0.04em 0.1em; /* room on top for the accent */
+}
+
+.hero-name-letter {
+  display: inline-block;
+  text-shadow: 0 0.04em 0.2em rgba(28, 16, 48, 0.18); /* soft glow only: a hard shadow would show through the see-through letters */
+}
+
+/* Bottom band ⬇️ */
+.hero-band {
+  position: absolute;
+  inset: 74% 0 0 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(16px, 4vh, 36px) var(--gutter) clamp(14px, 3vh, 26px);
+  background: var(--band);
+  transition: background-color 0.4s ease;
+}
+
+.hero-nav {
+  display: flex;
+  gap: clamp(16px, 2.6vw, 34px);
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1rem, 1.75vw, 1.6rem);
+}
+
+.hero-nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.hero-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: var(--sunset);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.hero-nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.hero-cta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(6px, 1.2vh, 12px);
+}
+
+.hero-tagline {
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  color: color-mix(in srgb, var(--fg) 75%, transparent);
+}
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 32px);
+}
+
+.hero-cta {
+  white-space: nowrap;
+  padding: clamp(8px, 1.4vh, 12px) 30px;
+  font-size: clamp(1.05rem, 1.6vw, 1.5rem);
+}
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.6vw, 20px);
+}
+
+.hero-social-icon {
+  width: clamp(28px, 2.7vw, 36px);
+  height: clamp(28px, 2.7vw, 36px);
+  transition: transform 0.4s var(--ease-out), color 0.3s ease;
+}
+
+.hero-socials a:hover .hero-social-icon {
+  transform: translateY(-3px) scale(1.08);
+  color: var(--highlight);
+}
+
+/* Character ⬇️ */
+.hero-character {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  aspect-ratio: 1086 / 1448;
+  z-index: 3;
+  transform-origin: 100% 100%; /* grow from the bottom-right so it stays glued to the edge */
+  pointer-events: none;
+}
+
+.hero-character img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+  filter: drop-shadow(-12px 0 40px rgba(5, 5, 15, 0.35));
+}
+
+/* Fades the frame into the page background as you leave the hero */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  background: var(--bg);
+  pointer-events: none;
+}
+
+/* Narrow / portrait screens ⬇️ */
+@media (max-aspect-ratio: 4/3) {
+  .hero-sky {
+    inset: 0 0 30% 0;
+  }
+
+  .hero-band {
+    inset: 70% 0 0 0;
+  }
+
+  .hero-name {
+    top: 10%;
+  }
+
+  .hero-character {
+    height: 74%;
+    right: -12%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-nav {
+    display: none;
+  }
+
+  /* Let the CTA and socials sit above the character on small screens */
+  .hero-band {
+    z-index: auto;
+  }
+
+  /* The sky fills the whole screen; the band turns into a soft shade so the text stays readable */
+  .hero-sky {
+    inset: 0;
+  }
+
+  /* Pinned to the bottom, 10px off the edge (the back-to-top button is hidden on the hero) */
+  .hero-band {
+    --fg: #fff;
+    color: #fff;
+    background: linear-gradient(180deg, transparent 0%, rgba(5, 5, 15, 0.55) 100%);
+    justify-content: flex-end;
+    padding-bottom: 10px;
+  }
+
+  .hero-cta-block {
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}

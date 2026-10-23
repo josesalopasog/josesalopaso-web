@@ -1,0 +1,89 @@
+/* Dark stage with a sunset glow, between the Projects photo and the Contact sky */
+.skills {
+  --skills-pink: #ec6ea9;
+  --skills-peach: #ffd3a3;
+  background:
+    radial-gradient(60% 45% at 50% 100%, rgba(255, 143, 171, 0.14), transparent 70%),
+    radial-gradient(40% 40% at 0% 40%, rgba(180, 140, 255, 0.12), transparent 70%),
+    radial-gradient(40% 40% at 100% 20%, rgba(255, 192, 122, 0.08), transparent 70%),
+    var(--bg);
+}
+
+.skills-heading {
+  text-align: center;
+  margin-bottom: clamp(40px, 7vh, 80px);
+}
+
+/* Same pink-to-peach story text as About Me */
+.skills-intro {
+  max-width: 46ch;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.75rem);
+  line-height: 1.25;
+  background: linear-gradient(180deg, var(--skills-pink) 0%, var(--skills-peach) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 48px);
+  margin-top: clamp(64px, 11vh, 120px);
+}
+
+.skills-group-title {
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  color: var(--skills-pink);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid color-mix(in srgb, var(--skills-pink) 35%, transparent);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  color: color-mix(in srgb, var(--fg) 78%, transparent);
+}
+
+.skills-list li {
+  transition: color 0.3s ease, translate 0.4s var(--ease-out);
+}
+
+.skills-list li:hover {
+  color: var(--skills-peach);
+  translate: 4px 0;
+}
+
+.skills-quote {
+  margin-top: clamp(72px, 12vh, 130px);
+  text-align: center;
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  line-height: 1.2;
+}
+
+.skills-quote p {
+  color: color-mix(in srgb, var(--fg) 70%, transparent);
+}
+
+.skills-quote-link {
+  display: inline-block;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.skills-quote-link:hover {
+  transform: translateY(-3px);
+}
+
+/* Deeper tones so the text keeps its contrast on the cream light theme */
+html:not(.dark) .skills {
+  --skills-pink: #d6457f;
+  --skills-peach: #e07a3f;
+}

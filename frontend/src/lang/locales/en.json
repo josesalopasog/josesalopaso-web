@@ -1,0 +1,279 @@
+{
+    "header": {
+        "aboutMe": "About Me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact"
+    },
+    "aboutMe": {
+        "title": "Hi, I'm José",
+        "description": "I'm a fullstack web developer and electronic engineer based in Bogotá. I turn ideas into fast, good-looking websites and web apps built to sell, from the first line of code to launch day. I work closely with you, with clear communication at every step, so your project grows online.",
+        "quote": "Got an idea? Let's make it real"
+    },
+    "profile": {
+        "availability": "Available for freelance projects",
+        "role": "Fullstack Web Developer · Electronic Engineer",
+        "university": "Sergio Arboleda University",
+        "location": "Bogotá, Colombia"
+    },
+    "projects": {
+        "title": "Projects",
+        "decimetrix": {
+            "title": "CyberJS - Assets",
+            "subtitle": "Manage company assets and locate them on a map.",
+            "tag": "Management Systems"
+        },
+        "cyberjs": {
+            "title": "CyberJS - Ui",
+            "subtitle": "A project with my Ui components.",
+            "tag": "Utils"
+        },
+        "eyebrow": "Selected work",
+        "code": "View code",
+        "watch": "Visit site",
+        "iter412": {
+            "title": "Iter 4.12",
+            "subtitle": "Website for a youth retreat group in Bogotá: retreats, meeting calendar and sign-ups.",
+            "tag": "Landing Page"
+        }
+    },
+    "skills": {
+        "title": "Stack · Skills",
+        "quote1": "Need a technology that isn't listed?",
+        "quote2": "Message me: I learn fast and I'll prove it.",
+        "eyebrow": "03 · What I do",
+        "intro": "I build complete web apps with the MERN stack (MongoDB, Express, React and Node.js), from the database to the interface. I'm also an electronic engineer who edits video and runs social media: one partner for your product and for the content that grows it.",
+        "groups": [
+            {
+                "title": "MERN stack",
+                "items": [
+                    "MongoDB",
+                    "Express.js",
+                    "React",
+                    "Node.js",
+                    "JavaScript",
+                    "TypeScript",
+                    "Redux",
+                    "Tailwind CSS",
+                    "Socket.io",
+                    "JWT",
+                    "REST APIs",
+                    "PostgreSQL"
+                ]
+            },
+            {
+                "title": "Electronics",
+                "items": [
+                    "Circuit design",
+                    "PCB design",
+                    "Arduino",
+                    "ESP32 & microcontrollers",
+                    "IoT",
+                    "Sensors & instrumentation"
+                ]
+            },
+            {
+                "title": "Video editing",
+                "items": [
+                    "Adobe Premiere Pro",
+                    "After Effects",
+                    "DaVinci Resolve",
+                    "CapCut",
+                    "Reels & short-form video"
+                ]
+            },
+            {
+                "title": "Social media",
+                "items": [
+                    "Content strategy",
+                    "Instagram & TikTok",
+                    "Meta Business Suite",
+                    "Canva",
+                    "Analytics & reporting"
+                ]
+            },
+            {
+                "title": "Tools",
+                "items": [
+                    "Git & GitHub",
+                    "Docker",
+                    "Postman",
+                    "VS Code",
+                    "Figma",
+                    "Power BI"
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Let's chat!",
+        "eyebrow": "04 · Let's work together",
+        "intro": "Tell me your idea on the left or price your project on the right: the total updates instantly. I reply within 24–48 hours, no strings attached.",
+        "quote": {
+            "included": "Always included",
+            "types": {
+                "landing": {
+                    "name": "Landing page",
+                    "desc": "One page to sell a product, service or event.",
+                    "includes": [
+                        "Responsive design",
+                        "Up to 5 sections",
+                        "Contact form or WhatsApp button",
+                        "Basic SEO and fast loading"
+                    ]
+                },
+                "portfolio": {
+                    "name": "Portfolio",
+                    "desc": "Show your work and get clients.",
+                    "includes": [
+                        "Responsive design",
+                        "Home, about, projects and contact",
+                        "Project gallery",
+                        "Basic SEO and fast loading"
+                    ]
+                },
+                "management": {
+                    "name": "Management system",
+                    "desc": "A web app to run your business: data, users, dashboards.",
+                    "includes": [
+                        "Login and user accounts",
+                        "Admin dashboard",
+                        "Create, edit and delete records",
+                        "Database and secure API"
+                    ]
+                }
+            },
+            "features": {
+                "customDesign": {
+                    "name": "Custom design in Figma",
+                    "desc": "Unique mockups before coding"
+                },
+                "copywriting": {
+                    "name": "Copywriting",
+                    "desc": "I write the texts for you"
+                },
+                "extraSections": {
+                    "name": "Extra sections",
+                    "desc": "More than 5 sections"
+                },
+                "animations": {
+                    "name": "Advanced animations",
+                    "desc": "Scroll effects like this site"
+                },
+                "multilanguage": {
+                    "name": "Multi-language",
+                    "desc": "Spanish and English"
+                },
+                "seo": {
+                    "name": "Advanced SEO + analytics",
+                    "desc": "Google Analytics, Search Console, meta tags"
+                },
+                "booking": {
+                    "name": "Booking or calendar",
+                    "desc": "Calendly, WhatsApp or similar"
+                },
+                "hosting": {
+                    "name": "Domain & hosting setup",
+                    "desc": "I publish it for you"
+                },
+                "cms": {
+                    "name": "Self-editable content (CMS)",
+                    "desc": "Update projects without code"
+                },
+                "blog": {
+                    "name": "Blog",
+                    "desc": "Posts with categories"
+                },
+                "themes": {
+                    "name": "Light & dark mode",
+                    "desc": "Theme switch"
+                },
+                "roles": {
+                    "name": "Roles & permissions",
+                    "desc": "Admins, staff, clients..."
+                },
+                "reports": {
+                    "name": "Reports & charts",
+                    "desc": "Dashboards with KPIs"
+                },
+                "realtime": {
+                    "name": "Real-time notifications",
+                    "desc": "Live updates with Socket.io"
+                },
+                "maps": {
+                    "name": "Maps & geolocation",
+                    "desc": "Locate assets or customers"
+                },
+                "files": {
+                    "name": "File uploads",
+                    "desc": "Images, PDFs, documents"
+                },
+                "exports": {
+                    "name": "PDF / Excel export",
+                    "desc": "Download your data"
+                },
+                "payments": {
+                    "name": "Online payments",
+                    "desc": "Stripe, PayPal, Wompi..."
+                },
+                "integrations": {
+                    "name": "Third-party integrations",
+                    "desc": "External APIs and services"
+                },
+                "pwa": {
+                    "name": "Installable app (PWA)",
+                    "desc": "Works like a mobile app"
+                }
+            },
+            "rush": "Rush delivery",
+            "rushDesc": "About 30% faster (+25%)"
+        },
+        "form": {
+            "name": "Name (Who are you?)",
+            "email": "Email",
+            "phone": "Phone / WhatsApp (optional)",
+            "message": "Tell me about your project",
+            "messagePlaceholder": "What's it for, who will use it, any site you like as a reference...",
+            "consent": "I agree to be contacted about this request.",
+            "submit": "Send message",
+            "sending": "Sending...",
+            "success": "Thanks! Your request is on its way. I'll get back to you within 24–48 hours.",
+            "error": "Something went wrong. Please try again or email me directly.",
+            "projectTitle": "Project title"
+        },
+        "mailCard": {
+            "eyebrow": "Write to me",
+            "title": "Tell me your idea"
+        },
+        "quoteCard": {
+            "eyebrow": "Quote",
+            "title": "Get a quote in seconds",
+            "priceLabel": "Approx.",
+            "use": "I want this quote",
+            "attached": "Quote attached: {{label}} · {{price}}",
+            "remove": "Remove",
+            "note": "Ballpark price, no commitment."
+        },
+        "socials": {
+            "title": "Prefer social media? Find me here"
+        }
+    },
+    "footer": {
+        "madeWith": "Made with",
+        "byMe": "by me !"
+    },
+    "hero": {
+        "workWithMe": "Work with me",
+        "tagline": "Let's make your idea real..."
+    },
+    "controls": {
+        "language": "Switch language",
+        "theme": "Switch theme",
+        "menu": "Open menu",
+        "top": "Back to top"
+    },
+    "seo": {
+        "title": "José Salopaso | Fullstack Web Developer in Bogotá (MERN)",
+        "description": "Fullstack web developer in Bogotá building fast websites, landing pages and web apps with React, Node.js and MongoDB. Get an instant quote and a reply in 24–48 h."
+    }
+}

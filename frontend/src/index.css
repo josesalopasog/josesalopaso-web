@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "CalSans";
+  src: url("./assets/fonts/CalSans-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Design tokens ⬇️ (light first, dark overrides) */
+:root {
+  --bg: #fff4ee;
+  --bg-soft: #ffe6df;
+  --fg: #1b1030;
+  --muted: rgba(27, 16, 48, 0.7);
+  --line: rgba(27, 16, 48, 0.12);
+  --glass: rgba(255, 255, 255, 0.55);
+  --band: #fff4ee;
+  --accent: #ffd3e6;
+  --accent-ink: #4a2344;
+  --highlight: #ff8fab;
+  /* Buttons stay a soft pink in both themes */
+  --btn-bg: #ffd3e6;
+  --sunset: linear-gradient(90deg, #ff7a45 0%, #e0457b 50%, #7b4dff 100%);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --gutter: clamp(16px, 4vw, 48px);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #05050f;
+  --bg-soft: #0e0c1f;
+  --fg: #ffffff;
+  --muted: rgba(255, 255, 255, 0.68);
+  --line: rgba(255, 255, 255, 0.12);
+  --glass: rgba(20, 16, 40, 0.55);
+  --band: #05050f;
+  --sunset: linear-gradient(90deg, #ffc07a 0%, #ff8fab 45%, #b48cff 100%);
+  color-scheme: dark;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  box-sizing: border-box;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-size: clamp(1rem, 1.05vw, 1.2rem);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "CalSans", sans-serif;
+  font-weight: normal;
+  line-height: 1;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Shared section bits ⬇️ */
+.section {
+  position: relative;
+  padding: clamp(80px, 14vh, 160px) var(--gutter);
+}
+
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Centered, wide-spaced, see-through heading (the VI "trailers" look) */
+.display-eyebrow {
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.35rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--fg) 55%, transparent);
+  margin-bottom: 14px;
+}
+
+.display-title {
+  font-size: clamp(2.5rem, 7.5vw, 7rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--fg) 60%, transparent);
+  text-shadow: 0 0 0.35em color-mix(in srgb, var(--fg) 18%, transparent);
+}
+
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--accent-ink);
+  font-weight: 700;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  box-shadow: 0 6px 24px rgba(255, 143, 171, 0.25);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.pill-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 36px rgba(255, 143, 171, 0.45);
+}
+
+:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 3px;
+}

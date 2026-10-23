@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "backend": "nodemon --watch backend --ext ts --exec ts-node backend/src/server.ts",
-    "frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+    "backend": "tsx watch backend/src/server.ts",
+    "frontend": "npm --prefix frontend run dev",
+    "dev": "concurrently -n backend,frontend -c blue,magenta \"npm run backend\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/josesalopasog/josesalopaso-web#readme",
   "devDependencies": {
-    "@types/node": "^22.15.19",
-    "concurrently": "^9.1.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "@types/node": "^26.6.5",
+    "concurrently": "^10.0.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   }
 }

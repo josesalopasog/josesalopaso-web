@@ -1,0 +1,12 @@
+.gradient-text {
+  background: var(--sunset);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Words faded in one by one by RevealText */
+.reveal-word {
+  display: inline-block;
+}

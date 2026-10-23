@@ -1,0 +1,57 @@
+.floating-controls {
+  position: fixed;
+  right: clamp(16px, 2.2vw, 28px);
+  bottom: clamp(16px, 2.2vw, 28px);
+  z-index: 1002;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.floating-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 28px rgba(5, 5, 15, 0.25);
+  cursor: pointer;
+  transition: transform 0.4s var(--ease-out), border-color 0.3s ease;
+}
+
+.floating-control:hover {
+  transform: scale(1.1) rotate(-6deg);
+  border-color: var(--highlight);
+}
+
+.floating-control:active {
+  transform: scale(0.95);
+}
+
+/* Same glass circle as the mobile menu button */
+.floating-control-top {
+  color: var(--fg);
+}
+
+.floating-control-top-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Phones: the toggles live in the menu instead, only back-to-top stays here */
+@media (max-width: 768px) {
+  .floating-controls .floating-control-toggle {
+    display: none;
+  }
+
+  /* Match the menu button's size */
+  .floating-control-top {
+    width: 46px;
+    height: 46px;
+  }
+}

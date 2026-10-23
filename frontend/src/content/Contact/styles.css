@@ -1,0 +1,598 @@
+/* Sunset photo, dimmed; intro text on top and two poster-style cards below (email | quote) */
+.contact {
+  --fg: #fff; /* always light text on the photo */
+  --line: rgba(255, 255, 255, 0.16);
+  --glass: rgba(10, 8, 24, 0.45);
+  --card-cream: #fff1c4;
+  --card-lilac: #e6c9ff;
+  --card-peach: #ffd0a6;
+  --card-pink: #ff92b4;
+  overflow: clip;
+  color: #fff;
+}
+
+.contact-sky {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.contact-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--bg) 0%, transparent 18%),
+    rgba(30, 20, 56, 0.6);
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Wider than other sections so both cards have room (beats the shared .section-inner width) */
+.contact .contact-inner {
+  max-width: 1480px;
+}
+
+/* Desktop: the whole section (heading + both cards) fits in one screen */
+.contact.section {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: 74px; /* clear of the fixed header */
+  padding-bottom: 12px;
+}
+
+.contact-inner {
+  width: 100%;
+}
+
+/* Title on the left, intro on the right: one row instead of three */
+.contact-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(24px, 4vw, 64px);
+  margin-bottom: clamp(12px, 2.5vh, 32px);
+}
+
+.contact-heading .display-eyebrow {
+  margin-bottom: 6px;
+}
+
+.contact-title {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  text-shadow: 0.025em 0.03em 0 rgba(28, 16, 48, 0.35), 0 0.05em 0.25em rgba(28, 16, 48, 0.25);
+}
+
+.contact-intro {
+  max-width: 52ch;
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  line-height: 1.3;
+  background: linear-gradient(180deg, #ec6ea9 0%, #ffd3a3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards ⬇️ */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+
+.contact-card-wrap {
+  display: flex;
+}
+
+.contact-card {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(18px, 2vw, 32px);
+  border-radius: 28px;
+  box-shadow: 0 30px 80px -30px rgba(5, 5, 15, 0.75);
+}
+
+/* Both cards share the same navy background */
+.contact-card-mail,
+.contact-card-quote {
+  background:
+    radial-gradient(90% 60% at 100% 0%, rgba(255, 146, 180, 0.18), transparent 60%),
+    #25243f;
+}
+
+.contact-card-eyebrow {
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--card-lilac);
+  margin-bottom: 4px;
+}
+
+.contact-card-title {
+  font-size: clamp(1.6rem, 2.4vw, 2.6rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--card-cream);
+  margin-bottom: clamp(12px, 2vh, 20px);
+}
+
+/* Eyebrow + title on the left, the running total on the right */
+.contact-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Main button + small print share one row at the bottom of each card */
+.contact-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: auto;
+  padding-top: clamp(12px, 2vh, 20px);
+}
+
+.card-button {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  color: var(--accent-ink);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  cursor: pointer;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.card-button span {
+  transition: translate 0.4s var(--ease-out);
+}
+
+.card-button:hover {
+  transform: translateY(-3px);
+}
+
+.card-button:hover span {
+  translate: 4px 0;
+}
+
+.card-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.card-button-peach {
+  background: var(--btn-bg);
+  box-shadow: 0 8px 30px -6px rgba(255, 143, 171, 0.45);
+}
+
+.card-button-pink {
+  background: var(--btn-bg);
+  box-shadow: 0 8px 30px -6px rgba(255, 143, 171, 0.45);
+}
+
+/* Email form ⬇️ */
+.mail-fields {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto auto 1fr; /* the message row takes the rest of the card */
+  gap: 10px;
+}
+
+.mail-field-message textarea {
+  flex: 1;
+}
+
+.mail-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mail-field-wide {
+  grid-column: 1 / -1;
+}
+
+.mail-field input,
+.mail-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.mail-field textarea {
+  resize: none;
+  min-height: 84px;
+}
+
+.mail-field input::placeholder,
+.mail-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.mail-field input:focus,
+.mail-field textarea:focus {
+  outline: none;
+  border-color: var(--card-peach);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.mail-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.mail-attached {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 146, 180, 0.18);
+  border: 1px solid rgba(255, 146, 180, 0.5);
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+.mail-attached button {
+  flex: none;
+  text-decoration: underline;
+  color: var(--card-cream);
+  cursor: pointer;
+}
+
+/* Quote ⬇️ */
+.quote-total {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 8px 16px;
+  border-radius: 18px;
+  background: rgba(255, 146, 180, 0.14);
+  border: 1px solid rgba(255, 146, 180, 0.45);
+}
+
+.quote-total-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--card-lilac);
+}
+
+.quote-total-price {
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1.2rem, 1.9vw, 1.8rem);
+  line-height: 1.1;
+  color: var(--card-cream);
+}
+
+.quote-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quote-type {
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  font-family: "CalSans", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.quote-type:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.quote-type.is-active {
+  background: var(--card-pink);
+  border-color: var(--card-pink);
+  color: #1b1030;
+}
+
+.quote-included {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  margin: 10px 0 12px;
+  font-size: 0.8rem;
+  color: var(--card-peach);
+}
+
+/* Options as compact chips (name + price) */
+.quote-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Custom check: the native input stays for keyboard and screen readers, visually hidden */
+.quote-chip input,
+.quote-consent input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.quote-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.quote-chip:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.quote-chip.is-checked {
+  border-color: var(--card-pink);
+  background: rgba(255, 146, 180, 0.16);
+}
+
+.quote-chip:focus-within,
+.quote-consent:focus-within {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+}
+
+.quote-chip-mark {
+  flex: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.quote-chip.is-checked .quote-chip-mark {
+  background: var(--card-pink);
+  border-color: var(--card-pink);
+}
+
+.quote-chip.is-checked .quote-chip-mark::after {
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  top: 1.5px;
+  width: 4px;
+  height: 8px;
+  border: solid #1b1030;
+  border-width: 0 2px 2px 0;
+  rotate: 45deg;
+}
+
+.quote-chip-price {
+  font-family: "CalSans", sans-serif;
+  font-weight: normal;
+  color: var(--card-peach);
+}
+
+.quote-check {
+  flex: none;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.quote-consent input:checked + .quote-check {
+  background: var(--card-pink);
+  border-color: var(--card-pink);
+}
+
+.quote-consent input:checked + .quote-check::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1.5px;
+  width: 5px;
+  height: 10px;
+  border: solid #1b1030;
+  border-width: 0 2px 2px 0;
+  rotate: 45deg;
+}
+
+.quote-note {
+  flex: 1;
+  min-width: 160px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.quote-consent {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.quote-status {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.quote-status.is-success {
+  background: rgba(80, 200, 140, 0.2);
+  border: 1px solid rgba(80, 200, 140, 0.55);
+}
+
+.quote-status.is-error {
+  background: rgba(255, 90, 110, 0.2);
+  border: 1px solid rgba(255, 90, 110, 0.55);
+}
+
+/* Socials, centered under the cards: title, then the hero-style outline icons ⬇️ */
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: clamp(12px, 2.2vh, 24px);
+}
+
+.contact-socials-title {
+  font-family: "CalSans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  color: var(--card-cream);
+}
+
+.contact-socials-list {
+  display: flex;
+  justify-content: center;
+  gap: clamp(16px, 1.8vw, 24px);
+}
+
+.contact-social {
+  display: flex;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-social-icon {
+  width: clamp(28px, 2.6vw, 36px);
+  height: clamp(28px, 2.6vw, 36px);
+  transition: transform 0.4s var(--ease-out), color 0.3s ease;
+}
+
+.contact-social:hover .contact-social-icon,
+.contact-social:focus-visible .contact-social-icon {
+  transform: translateY(-3px) scale(1.08);
+  color: var(--highlight);
+}
+
+.contact-socials-title.is-caption {
+  color: var(--highlight);
+}
+
+/* Short desktop screens (≈720–820px tall): trim so everything still fits in one screen */
+@media (min-width: 1001px) and (max-height: 820px) {
+  .contact-title {
+    font-size: clamp(2.2rem, 4.2vw, 4rem);
+  }
+
+  .contact-card-title {
+    margin-bottom: 10px;
+  }
+
+  /* The "always included" line is the first thing to go; it's repeated in the quote email anyway */
+  .quote-included {
+    display: none;
+  }
+
+  .quote-types {
+    margin-bottom: 12px;
+  }
+
+  .quote-chips {
+    gap: 6px;
+  }
+
+  .quote-chip {
+    padding: 6px 11px;
+    font-size: 0.8rem;
+  }
+
+  /* The big "Let's chat!" title is enough on its own here */
+  .contact-heading .display-eyebrow {
+    display: none;
+  }
+
+  .contact.section {
+    padding-top: 70px;
+    padding-bottom: 6px;
+  }
+
+  .contact-heading {
+    margin-bottom: 8px;
+  }
+
+  .contact-socials {
+    margin-top: 4px;
+    gap: 2px;
+  }
+
+  .contact-social-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stacked cards are taller than a screen anyway */
+  .contact.section {
+    min-height: 0;
+    display: block;
+    padding-top: clamp(80px, 14vh, 160px);
+    padding-bottom: clamp(80px, 14vh, 160px);
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-heading {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mail-fields {
+    grid-template-columns: 1fr;
+  }
+}

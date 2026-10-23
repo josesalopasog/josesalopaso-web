@@ -1,0 +1,19 @@
+.three-bars-btn {
+  position: relative;
+  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.three-bars-icon {
+  width: 24px;
+  height: 24px;
+}

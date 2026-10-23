@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { verifyToken } from '@clerk/clerk-sdk-node';
+import { verifyToken } from '@clerk/backend';
 import { config } from '../config/env';
 import asyncHandler from './asyncHandler';
 
