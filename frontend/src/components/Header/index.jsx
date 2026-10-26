@@ -1,5 +1,5 @@
 //Packages ⬇️
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 //Components ⬇️
@@ -13,9 +13,15 @@ const Header = () => {
   const { t } = useTranslation();
   const { scrollY } = useScroll();
   const [isPastHero, setIsPastHero] = useState(false);
+  const isPastHeroRef = useRef(false);
 
+  // Runs on every scroll event: only touch React state when the flag actually flips
   useMotionValueEvent(scrollY, "change", (value) => {
-    setIsPastHero(value > window.innerHeight * 0.9);
+    const next = value > window.innerHeight * 0.9;
+    if (next !== isPastHeroRef.current) {
+      isPastHeroRef.current = next;
+      setIsPastHero(next);
+    }
   });
 
   return (

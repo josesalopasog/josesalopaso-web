@@ -1,7 +1,8 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
+import TermsModal from "./TermsModal";
 
 const API_URL = import.meta.env.VITE_API_URL ?? "";
 
@@ -21,6 +22,21 @@ const MailCard = forwardRef(({ quote, quoteSummary, onRemoveQuote }, nameRef) =>
     const f = (key) => t(`contact.form.${key}`);
     const [fields, setFields] = useState(EMPTY_FIELDS);
     const [status, setStatus] = useState("idle");
+    // Only when the quote is attached: its terms must be accepted (in the pop-up) before sending
+    const [termsAccepted, setTermsAccepted] = useState(false);
+    const [isTermsOpen, setIsTermsOpen] = useState(false);
+    const closeTerms = useCallback(() => setIsTermsOpen(false), []);
+
+    const removeQuote = () => {
+        setTermsAccepted(false);
+        onRemoveQuote();
+    };
+
+    // Ticking the box opens the terms (it only gets checked from there); unticking it just clears it
+    const handleTermsCheckbox = (event) => {
+        if (event.target.checked) setIsTermsOpen(true);
+        else setTermsAccepted(false);
+    };
 
     const updateField = (event) => {
         const { name, value, type, checked } = event.target;
@@ -29,19 +45,23 @@ const MailCard = forwardRef(({ quote, quoteSummary, onRemoveQuote }, nameRef) =>
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        if (quote && !termsAccepted) {
+            setIsTermsOpen(true);
+            return;
+        }
         setStatus("sending");
 
         try {
             const response = await fetch(`${API_URL}/api/quote`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...fields, quote, language: i18n.language }),
+                body: JSON.stringify({ ...fields, quote, termsAccepted: Boolean(quote) && termsAccepted, language: i18n.language }),
             });
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
             setStatus("success");
             setFields(EMPTY_FIELDS);
-            onRemoveQuote();
+            removeQuote();
         } catch {
             setStatus("error");
         }
@@ -98,8 +118,57 @@ const MailCard = forwardRef(({ quote, quoteSummary, onRemoveQuote }, nameRef) =>
                         exit={{ opacity: 0, height: 0 }}
                     >
                         <span>{quoteSummary}</span>
-                        <button type="button" onClick={onRemoveQuote}>{t("contact.quoteCard.remove")}</button>
+                        <button type="button" onClick={removeQuote}>{t("contact.quoteCard.remove")}</button>
                     </motion.p>
+                )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+                {quote && (
+                    <motion.div
+                        className="mail-terms"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                    >
+                        <label className="quote-consent">
+                            <input
+                                type="checkbox"
+                                name="termsAccepted"
+                                checked={termsAccepted}
+                                onChange={handleTermsCheckbox}
+                                required
+                            />
+                            <span className="quote-check" aria-hidden="true" />
+                            <span>
+                                {t("contact.terms.checkboxBefore")}{" "}
+                                <button
+                                    type="button"
+                                    className="mail-terms-link"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        setIsTermsOpen(true);
+                                    }}
+                                >
+                                    {t("contact.terms.link")}
+                                </button>
+                                {t("contact.terms.checkboxAfter") && ` ${t("contact.terms.checkboxAfter")}`}
+                            </span>
+                        </label>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+                {isTermsOpen && (
+                    <TermsModal
+                        initiallyAccepted={termsAccepted}
+                        onClose={closeTerms}
+                        onAccept={() => {
+                            setTermsAccepted(true);
+                            setIsTermsOpen(false);
+                        }}
+                    />
                 )}
             </AnimatePresence>
 

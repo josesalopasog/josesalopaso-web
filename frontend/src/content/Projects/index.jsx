@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -12,14 +12,52 @@ import cyberjsImg from "../../assets/images/cyberjs-ui-preview.webp";
 import { GithubIcon } from "../../icons";
 
 const easeOutQuint = (t) => 1 - Math.pow(1 - t, 5);
+const clamp01 = (t) => Math.min(1, Math.max(0, t));
 
-const PlayIcon = (props) => (
-    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
-        <path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11.14-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14Z" />
-    </svg>
-);
+// Same breakpoint as the phone layout in styles.css
+const PHONE_QUERY = "(max-width: 900px)";
 
-// Poster-style card: the whole card (and its play button) opens the live site
+// Center of the laptop's screen inside projects-laptop.webp (fractions of the image): the cards come out of here
+const SCREEN_X = 0.49;
+const SCREEN_Y = 0.19;
+
+// Scroll window of the "out of the laptop" beat; on desktop each card starts a little after the previous one
+const EMERGE_START = 0.58;
+const EMERGE_LENGTH = 0.24;
+const EMERGE_STAGGER = 0.05;
+
+// A card (or, on phones, the whole row) starts tiny on the laptop screen and grows while it flies to its spot.
+// `getOffset` says how far its center is from the screen center when it's in place; when `isActive`
+// is false the element just stays in place, fully visible (the style is always applied, so nothing
+// is left behind when switching between the phone and desktop versions).
+const useEmerge = (progress, start, isActive, getOffset) => {
+    const local = (value) => (isActive() ? clamp01((value - start) / EMERGE_LENGTH) : 1);
+    const eased = (value) => easeOutQuint(local(value));
+    return {
+        x: useTransform(progress, (value) => (getOffset()?.x ?? 0) * (1 - eased(value))),
+        y: useTransform(progress, (value) => (getOffset()?.y ?? 0) * (1 - eased(value))),
+        scale: useTransform(progress, (value) => 0.12 + 0.88 * eased(value)),
+        opacity: useTransform(progress, (value) => clamp01(local(value) * 4)),
+    };
+};
+
+// Desktop: each card comes out on its own (on phones it stays put and the row moves instead)
+const EmergingCard = ({ index, progress, geometry, children }) => {
+    const style = useEmerge(
+        progress,
+        EMERGE_START + index * EMERGE_STAGGER,
+        () => !geometry.current.isPhone,
+        () => geometry.current.cards[index]
+    );
+
+    return (
+        <motion.div className="project-card-slot" style={style}>
+            {children}
+        </motion.div>
+    );
+};
+
+// Poster-style card: clicking anywhere on it opens the live site
 const ProjectCard = ({ project }) => {
     const { t } = useTranslation();
 
@@ -32,11 +70,8 @@ const ProjectCard = ({ project }) => {
                 className="project-card-link"
                 aria-label={`${t("projects.watch")}: ${project.title}`}
             >
-                <img src={project.image} alt="" loading="lazy" className="project-card-image" />
+                <img decoding="async" src={project.image} alt="" loading="lazy" className="project-card-image" />
                 <span className="project-card-shade" />
-                <span className="project-card-play">
-                    <PlayIcon />
-                </span>
                 <span className="project-card-copy">
                     <span className="project-card-tag">{project.tagProject}</span>
                     <span className="project-card-title">{project.title}</span>
@@ -68,13 +103,56 @@ const Projects = () => {
     // Progress across the pinned span: 0 when the frame locks, 1 when it lets go
     const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"] });
     const bgScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
-    const shadeOpacity = useTransform(scrollYProgress, [0, 0.6], [0.35, 1]);
-    // Three beats: 1) the laptop rises in the center, 2) it slides to the left, 3) all cards rise together
+    // Three beats: 1) the laptop rises in the center, 2) it slides to the left, 3) the cards come out of its screen
     const laptopY = useTransform(scrollYProgress, [0, 0.28], ["75%", "0%"], { ease: easeOutQuint });
     const laptopScale = useTransform(scrollYProgress, [0.32, 0.55], [1.12, 1]);
     const laptopToCenter = useTransform(scrollYProgress, [0.32, 0.55], [1, 0], { ease: easeOutQuint });
-    const cardsY = useTransform(scrollYProgress, [0.58, 0.9], ["110vh", "0vh"], { ease: easeOutQuint });
-    const cardsOpacity = useTransform(scrollYProgress, [0.58, 0.68], [0, 1]);
+    // 3) The cards come out of the laptop screen. Offsets are measured from the layout (no transforms
+    //    involved): by then the laptop has finished moving and sits in its final spot.
+    const laptopRef = useRef(null);
+    const geometry = useRef(null);
+    if (geometry.current === null) {
+        geometry.current = { isPhone: window.matchMedia(PHONE_QUERY).matches, cards: [], row: { x: 0, y: 0 } };
+    }
+
+    useLayoutEffect(() => {
+        const measure = () => {
+            const laptop = laptopRef.current;
+            const row = cardsRef.current;
+            if (!laptop || !row) return;
+            const phone = window.matchMedia(PHONE_QUERY).matches;
+            // On phones the laptop is centered with a CSS translate, which offsetLeft doesn't include
+            const laptopLeft = phone ? (window.innerWidth - laptop.offsetWidth) / 2 : laptop.offsetLeft;
+            const screen = {
+                x: laptopLeft + laptop.offsetWidth * SCREEN_X,
+                y: laptop.offsetTop + laptop.offsetHeight * SCREEN_Y,
+            };
+            const offsetFrom = (left, top, width, height) => ({
+                x: screen.x - (left + width / 2),
+                y: screen.y - (top + height / 2),
+            });
+            geometry.current = {
+                isPhone: phone,
+                row: offsetFrom(row.offsetLeft, row.offsetTop, row.offsetWidth, row.offsetHeight),
+                cards: [...row.children].map((slot) =>
+                    offsetFrom(row.offsetLeft + slot.offsetLeft, row.offsetTop + slot.offsetTop, slot.offsetWidth, slot.offsetHeight)
+                ),
+            };
+        };
+
+        measure();
+        window.addEventListener("resize", measure);
+        return () => window.removeEventListener("resize", measure);
+    }, []);
+
+    // Phones: the cards live in a swipe row (it would clip them), so the whole row comes out instead
+    const rowEmerge = useEmerge(
+        scrollYProgress,
+        EMERGE_START,
+        () => geometry.current.isPhone,
+        () => geometry.current.row
+    );
+    const cardsOpacity = useTransform(scrollYProgress, [EMERGE_START, EMERGE_START + 0.1], [0, 1]);
 
     // Phones: track which card is snapped to the center, and let the dots jump to one
     const cardStep = () => {
@@ -119,24 +197,23 @@ const Projects = () => {
     return (
         <section ref={sectionRef} className="projects" id="projects">
             <div className="projects-sticky">
-                <motion.img
+                <motion.img decoding="async"
                     src={heroSky}
                     alt=""
                     loading="lazy"
                     className="projects-bg"
                     style={{ scale: bgScale }}
                 />
-                <motion.div className="projects-shade" style={{ opacity: shadeOpacity }} />
-
                 <header className="projects-heading">
                     <Reveal as="p" className="display-eyebrow">{t("projects.eyebrow")}</Reveal>
                     <RevealText text={t("projects.title")} className="display-title" />
                 </header>
 
-                <motion.img
+                <motion.img decoding="async"
                     src={projectsLaptop}
                     alt=""
                     loading="lazy"
+                    ref={laptopRef}
                     className="projects-laptop"
                     style={{ y: laptopY, scale: laptopScale, "--to-center": laptopToCenter }}
                 />
@@ -144,11 +221,18 @@ const Projects = () => {
                 <motion.div
                     ref={cardsRef}
                     className="projects-cards"
-                    style={{ y: cardsY, opacity: cardsOpacity }}
+                    style={rowEmerge}
                     onScroll={handleCardsScroll}
                 >
-                    {projects.map((project) => (
-                        <ProjectCard key={project.webURL} project={project} />
+                    {projects.map((project, index) => (
+                        <EmergingCard
+                            key={project.webURL}
+                            index={index}
+                            progress={scrollYProgress}
+                            geometry={geometry}
+                        >
+                            <ProjectCard project={project} />
+                        </EmergingCard>
                     ))}
                 </motion.div>
 
@@ -167,6 +251,13 @@ const Projects = () => {
             </div>
         </section>
     );
+};
+
+EmergingCard.propTypes = {
+    index: PropTypes.number.isRequired,
+    progress: PropTypes.object.isRequired,
+    geometry: PropTypes.object.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 ProjectCard.propTypes = {

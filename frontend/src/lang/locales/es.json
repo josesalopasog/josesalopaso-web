@@ -256,6 +256,52 @@
         },
         "socials": {
             "title": "¿Prefieres redes? Escríbeme aquí"
+        },
+        "terms": {
+            "checkboxBefore": "Acepto los",
+            "link": "términos y condiciones",
+            "checkboxAfter": "de la cotización.",
+            "title": "Términos y condiciones de la cotización",
+            "intro": "Antes de enviar tu solicitud con la cotización adjunta, lee estas condiciones.",
+            "sections": [
+                {
+                    "title": "1. Naturaleza de la cotización",
+                    "text": "El valor que muestra el cotizador es un estimado de referencia calculado automáticamente con las opciones que elegiste. No es una oferta vinculante ni un contrato: el precio final se confirma por escrito después de revisar contigo el alcance del proyecto."
+                },
+                {
+                    "title": "2. Alcance",
+                    "text": "La cotización cubre únicamente el tipo de proyecto y las funciones seleccionadas. Los cambios, funciones o contenidos adicionales que surjan después se cotizan por separado."
+                },
+                {
+                    "title": "3. Moneda",
+                    "text": "Los precios se calculan en pesos colombianos (COP). El valor en dólares (USD) es aproximado, a una tasa de referencia, y puede variar según el tipo de cambio."
+                },
+                {
+                    "title": "4. Tiempos y entrega urgente",
+                    "text": "Los plazos de entrega son estimados y dependen de que el cliente entregue a tiempo los textos, imágenes, accesos y aprobaciones necesarios. La entrega urgente tiene un recargo del 25 %."
+                },
+                {
+                    "title": "5. Pagos y vigencia",
+                    "text": "La forma de pago se acuerda en la propuesta formal. Esa propuesta tiene una vigencia de 30 días desde su envío."
+                },
+                {
+                    "title": "6. Propiedad del trabajo",
+                    "text": "El código y los archivos del proyecto se entregan al cliente una vez se haya completado el pago total."
+                },
+                {
+                    "title": "7. Datos personales",
+                    "text": "Los datos que envías (nombre, correo, teléfono y mensaje) se usan solo para responder tu solicitud y preparar la propuesta, conforme a la Ley 1581 de 2012 de Colombia. No se comparten con terceros y puedes pedir que se eliminen escribiendo a josesalopaso@gmail.com."
+                },
+                {
+                    "title": "8. Sin compromiso",
+                    "text": "Enviar esta solicitud no obliga a ninguna de las partes a contratar."
+                }
+            ],
+            "accept": "He leído y acepto los términos y condiciones",
+            "confirm": "Aceptar",
+            "cancel": "Cancelar",
+            "close": "Cerrar",
+            "required": "Para enviar la cotización debes aceptar los términos y condiciones."
         }
     },
     "footer": {
@@ -270,7 +316,9 @@
         "language": "Cambiar idioma",
         "theme": "Cambiar tema",
         "menu": "Abrir menú",
-        "top": "Volver arriba"
+        "top": "Volver arriba",
+        "more": "Mostrar idioma y tema",
+        "less": "Ocultar idioma y tema"
     },
     "seo": {
         "title": "José Salopaso | Desarrollador Web Fullstack en Bogotá",

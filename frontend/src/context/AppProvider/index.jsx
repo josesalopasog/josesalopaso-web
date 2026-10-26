@@ -6,7 +6,7 @@ import i18n from "i18next";
 export const AppProvider = ({ children }) => {
     // States ⬇️
     const [theme, setTheme] = useState("dark");
-    const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+    const [language, setLanguage] = useState(localStorage.getItem('language') || 'es');
     const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);
 
     // Functions ⬇️

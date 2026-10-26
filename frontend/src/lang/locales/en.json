@@ -256,6 +256,52 @@
         },
         "socials": {
             "title": "Prefer social media? Find me here"
+        },
+        "terms": {
+            "checkboxBefore": "I accept the quote's",
+            "link": "terms and conditions",
+            "checkboxAfter": "",
+            "title": "Quote terms and conditions",
+            "intro": "Before you send your request with the quote attached, please read these terms.",
+            "sections": [
+                {
+                    "title": "1. What the quote is",
+                    "text": "The amount shown by the quote builder is a ballpark estimate calculated automatically from the options you picked. It is not a binding offer or a contract: the final price is confirmed in writing after we go over the project scope together."
+                },
+                {
+                    "title": "2. Scope",
+                    "text": "The quote only covers the selected project type and features. Changes, features or content added later are quoted separately."
+                },
+                {
+                    "title": "3. Currency",
+                    "text": "Prices are calculated in Colombian pesos (COP). The US dollar (USD) amount is approximate, at a reference rate, and may vary with the exchange rate."
+                },
+                {
+                    "title": "4. Timelines and rush delivery",
+                    "text": "Delivery times are estimates and depend on the client providing the needed copy, images, access and approvals on time. Rush delivery carries a 25% surcharge."
+                },
+                {
+                    "title": "5. Payment and validity",
+                    "text": "Payment terms are agreed in the formal proposal. That proposal is valid for 30 days from the day it is sent."
+                },
+                {
+                    "title": "6. Ownership",
+                    "text": "The project's code and files are handed over to the client once the full payment has been made."
+                },
+                {
+                    "title": "7. Personal data",
+                    "text": "The details you send (name, email, phone and message) are only used to answer your request and prepare the proposal, in line with Colombia's Law 1581 of 2012. They are never shared with third parties, and you can ask for them to be deleted by writing to josesalopaso@gmail.com."
+                },
+                {
+                    "title": "8. No commitment",
+                    "text": "Sending this request does not oblige either party to sign a contract."
+                }
+            ],
+            "accept": "I have read and accept the terms and conditions",
+            "confirm": "Accept",
+            "cancel": "Cancel",
+            "close": "Close",
+            "required": "To send the quote you need to accept the terms and conditions."
         }
     },
     "footer": {
@@ -270,7 +316,9 @@
         "language": "Switch language",
         "theme": "Switch theme",
         "menu": "Open menu",
-        "top": "Back to top"
+        "top": "Back to top",
+        "more": "Show language and theme",
+        "less": "Hide language and theme"
     },
     "seo": {
         "title": "José Salopaso | Fullstack Web Developer in Bogotá (MERN)",

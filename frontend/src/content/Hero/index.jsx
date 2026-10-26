@@ -42,7 +42,7 @@ const Hero = () => {
         <section ref={heroRef} className="hero" id="home">
             <div className="hero-sticky">
                 <motion.div className="hero-sky" style={{ scale: skyScale, y: skyY }}>
-                    <motion.img
+                    <motion.img decoding="async"
                         src={heroSky}
                         alt=""
                         fetchPriority="high"
@@ -121,7 +121,7 @@ const Hero = () => {
                     className="hero-character"
                     style={{ scale: characterScale }}
                 >
-                    <motion.img
+                    <motion.img decoding="async"
                         src={heroCharacter}
                         alt="Illustration of Jose Salopaso leaning on a railing at sunset"
                         initial={{ opacity: 0, y: "6%" }}

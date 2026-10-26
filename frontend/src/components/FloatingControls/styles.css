@@ -5,20 +5,18 @@
   z-index: 1002;
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 10px;
 }
 
 .floating-control {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid var(--line);
-  background: var(--glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg) 85%, transparent); /* no backdrop blur: see Header/styles.css */
   box-shadow: 0 8px 28px rgba(5, 5, 15, 0.25);
   cursor: pointer;
   transition: transform 0.4s var(--ease-out), border-color 0.3s ease;
@@ -39,19 +37,90 @@
 }
 
 .floating-control-top-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Icons sized to the smaller circles (the menu keeps its own sizes) */
+.floating-controls .lang-icon {
   width: 24px;
   height: 24px;
 }
 
-/* Phones: the toggles live in the menu instead, only back-to-top stays here */
+.floating-controls .lang-code {
+  font-size: 0.9rem;
+}
+
+.floating-controls .theme-toggle-icon {
+  width: 19px;
+  height: 19px;
+}
+
+/* Language + theme, folded out to the right of the +/− button */
+.floating-controls-toggles {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* +/−: two bars drawn in CSS so the vertical one can fold away */
+.floating-control-more {
+  color: var(--fg);
+}
+
+.floating-control-more-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.floating-control-more-icon span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.floating-control-more-icon span:last-child {
+  transform: rotate(90deg);
+}
+
+.floating-control-more-icon.is-open span:last-child {
+  transform: rotate(180deg) scaleX(0);
+}
+
+/* Holds the arrow; its width animates from 0 so the toggles slide left when it shows up */
+.floating-control-top-slot {
+  display: flex;
+  justify-content: flex-end;
+  overflow: visible;
+}
+
+/* Phones: same row (language, theme, back-to-top), a bit smaller */
 @media (max-width: 768px) {
-  .floating-controls .floating-control-toggle {
-    display: none;
+  .floating-controls .floating-control {
+    width: 40px;
+    height: 40px;
   }
 
-  /* Match the menu button's size */
-  .floating-control-top {
-    width: 46px;
-    height: 46px;
+  .floating-controls .lang-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .floating-controls .theme-toggle-icon,
+  .floating-control-top-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .floating-control-more-icon {
+    width: 14px;
+    height: 14px;
   }
 }

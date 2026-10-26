@@ -1,6 +1,7 @@
 /* Tall section + sticky frame: the frame stays pinned while the cards rise into it */
 .projects {
   --fg: #fff; /* always light text on the dimmed photo */
+  --laptop-size: min(64svh, 44vw); /* the image is square, so this is its width too */
   position: relative;
   height: 340svh;
   color: #fff;
@@ -20,15 +21,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-/* Dims the palms more and more as the cards come up, like the VI trailers section */
-.projects-shade {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, var(--bg) 0%, transparent 16%),
-    rgba(52, 36, 82, 0.72);
+  will-change: transform;
 }
 
 .projects-heading {
@@ -49,73 +42,72 @@
   transform-origin: center bottom;
   bottom: 0;
   z-index: 1;
-  height: min(64svh, 44vw);
+  height: var(--laptop-size);
   width: auto;
   pointer-events: none;
-  filter: drop-shadow(0 20px 40px rgba(5, 5, 15, 0.45));
+  will-change: transform;
 }
 
-/* Cards ⬇️ (width is capped by the screen height so the posters always fit) */
+/* Cards ⬇️ (width is capped by the screen height so the posters always fit, and by the space
+   left to the right of the laptop — which sits at left: -2% — so the two never overlap) */
 .projects-cards {
   position: absolute;
   right: var(--gutter);
   bottom: calc(clamp(48px, 12.5svh, 150px) + 50px); /* above the middle of the space under the heading */
   z-index: 2;
-  width: min(66vw, calc((100svh - 300px) * 2.4));
+  width: min(
+    66vw,
+    calc((100svh - 300px) * 2.4),
+    calc(100% - var(--gutter) - var(--laptop-size) + 2% - 32px)
+  );
+  will-change: transform, opacity;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(14px, 1.8vw, 26px);
 }
 
+/* Hover like the VI trailer cards: the card grows a touch and a soft light glows around it.
+   Only transform/opacity change, so the browser doesn't repaint the card on every frame. */
 .project-card {
   position: relative;
   aspect-ratio: 49 / 62;
   border-radius: 22px;
-  overflow: hidden;
   box-shadow: 0 30px 60px -20px rgba(5, 5, 15, 0.6);
-  background: #1a1430;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.28),
+    0 0 36px 6px rgba(236, 200, 255, 0.35);
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-out);
+  pointer-events: none;
 }
 
 .project-card-link {
   position: absolute;
   inset: 0;
   display: block;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #1a1430;
 }
 
 .project-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s var(--ease-out), filter 0.6s ease;
 }
 
 .project-card-shade {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 40%, rgba(15, 8, 30, 0.85) 100%);
-}
-
-.project-card-play {
-  position: absolute;
-  left: 50%;
-  top: 62%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(64px, 7vw, 92px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #fff;
-  color: #121212;
-  translate: -50% -50%;
-  box-shadow: 0 10px 30px rgba(5, 5, 15, 0.35);
-  transition: transform 0.5s var(--ease-out), background-color 0.3s ease;
-}
-
-.project-card-play svg {
-  width: 38%;
-  height: 38%;
-  margin-left: 6%;
 }
 
 .project-card-copy {
@@ -155,16 +147,14 @@
   transition: max-height 0.6s var(--ease-out), opacity 0.4s ease;
 }
 
-.project-card:hover .project-card-image,
-.project-card:focus-within .project-card-image {
-  transform: scale(1.08);
-  filter: saturate(1.15);
+.project-card:hover,
+.project-card:focus-within {
+  transform: scale(1.04);
 }
 
-.project-card:hover .project-card-play,
-.project-card:focus-within .project-card-play {
-  transform: scale(1.12);
-  background: var(--btn-bg);
+.project-card:hover::before,
+.project-card:focus-within::before {
+  opacity: 1;
 }
 
 .project-card:hover .project-card-subtitle,
@@ -184,10 +174,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(5, 5, 15, 0.45);
+  background: rgba(5, 5, 15, 0.7); /* no backdrop blur: the cards move while they come out of the laptop */
   border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   transition: transform 0.4s var(--ease-out), border-color 0.3s ease;
 }
 
@@ -209,7 +197,7 @@
 /* Phones: cards sit right under the heading (dots between them) in a swipe row that always snaps one card to the center */
 @media (max-width: 900px) {
   .projects {
-    --card-w: min(76vw, 340px, calc((100svh - 330px) * 0.79));
+    --card-w: min(64vw, 290px, calc((100svh - 360px) * 0.79));
   }
 
   /* Stays centered under the cards instead of sliding to the left */
@@ -218,7 +206,7 @@
     --laptop-top: calc(clamp(200px, 28svh, 250px) + var(--card-w) * 62 / 49 + 10px);
     top: var(--laptop-top);
     bottom: auto;
-    height: min(34svh, calc(100svh - var(--laptop-top)));
+    height: min(46svh, calc(100svh - var(--laptop-top)));
     left: 0;
     translate: calc(50vw - 50%) 0;
     opacity: 0.85;
@@ -272,15 +260,19 @@
   .project-card {
     scroll-snap-align: center;
     scroll-snap-stop: always;
+    box-shadow: none;
   }
 
   /* No hover on touch, so always show the description (and lift the play button clear of it) */
   .project-card-subtitle {
     max-height: 6em;
     opacity: 1;
+    font-size: 0.85rem;
+    line-height: 1.35;
   }
 
-  .project-card-play {
-    top: 42%;
+  .project-card-copy {
+    padding: 0 16px 18px;
   }
+
 }

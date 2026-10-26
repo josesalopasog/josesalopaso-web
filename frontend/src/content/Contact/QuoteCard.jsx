@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { PROJECT_TYPES, formatCopShort } from "./quoteConfig";
+import { PROJECT_TYPES, formatMoneyShort } from "./quoteConfig";
 
 // Right card: pick a project type and tick options; the total in the corner adds up as you go
 const QuoteCard = ({ typeId, selected, rush, total, money, onType, onToggle, onRush, onUse }) => {
@@ -64,7 +64,7 @@ const QuoteCard = ({ typeId, selected, rush, total, money, onType, onToggle, onR
                         <input type="checkbox" checked={selected.includes(feature.id)} onChange={() => onToggle(feature.id)} />
                         <span className="quote-chip-mark" aria-hidden="true" />
                         <span>{q(`features.${feature.id}.name`)}</span>
-                        <span className="quote-chip-price">+{formatCopShort(feature.price, i18n.language)}</span>
+                        <span className="quote-chip-price">+{formatMoneyShort(feature.price, i18n.language)}</span>
                     </label>
                 ))}
 
