@@ -1,0 +1,9 @@
+# Netlify builds only the frontend (the Express backend is deployed separately).
+# This file overrides the build settings in the Netlify UI.
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
