@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className={`site-header ${isPastHero ? "is-visible" : ""}`}>
-      <a href="#home" className="site-header-brand">
+      <a href="#home" className="site-header-brand" translate="no">
         <GradientText>Jose Salopaso</GradientText>
       </a>
       <nav>

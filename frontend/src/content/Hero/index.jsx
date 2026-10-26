@@ -56,6 +56,7 @@ const Hero = () => {
                     className="hero-name"
                     style={{ opacity: fadeOut }}
                     aria-label="José Salopaso"
+                    translate="no"
                 >
                     {NAME_LINES.map((line, lineIndex) => (
                         <span key={line} className="hero-name-line" aria-hidden="true">
