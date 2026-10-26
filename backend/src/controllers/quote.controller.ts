@@ -58,6 +58,11 @@ export const sendQuoteRequest = asyncHandler(
             return res.status(400).json({ success: false, message: 'Missing or invalid fields' });
         }
 
+        // A request with the quote attached is only sent if its terms were accepted
+        if (quote && body.termsAccepted !== true) {
+            return res.status(400).json({ success: false, message: 'Quote terms must be accepted' });
+        }
+
         if (!canSendMail) {
             return res.status(503).json({ success: false, message: 'Email service is not configured' });
         }
@@ -74,6 +79,7 @@ export const sendQuoteRequest = asyncHandler(
                 ['Project', quote.label],
                 ['Selected options', quote.features.length ? quote.features.join(', ') : '—'],
                 ['Estimate shown', `$${quote.total.toLocaleString('es-CO')} COP`],
+                ['Quote terms', 'Accepted'],
             );
         }
         const topic = projectTitle ? `“${projectTitle}”` : quote?.label;

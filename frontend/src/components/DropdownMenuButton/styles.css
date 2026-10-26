@@ -3,17 +3,15 @@
   z-index: 1001;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 46px;
+  width: 40px; /* same as the floating buttons at the bottom */
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--line);
-  background: var(--glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 85%, transparent); /* no backdrop blur: see Header/styles.css */
   cursor: pointer;
 }
 
 .three-bars-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }

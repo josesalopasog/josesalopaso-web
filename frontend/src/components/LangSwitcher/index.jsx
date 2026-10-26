@@ -27,6 +27,8 @@ const LanguageSwitcher = ({ className = "" }) => {
             ) : (
                 <ColombiaFlag className="lang-icon" />
             )}
+            {/* On hover the flag fades out and the current language code shows instead */}
+            <span className="lang-code" aria-hidden="true">{language === "en" ? "EN" : "ES"}</span>
         </button>
     );
 };

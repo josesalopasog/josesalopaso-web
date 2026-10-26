@@ -58,15 +58,27 @@ export const estimateQuote = (type, selected, rush) => {
     return roundTo(rush ? total * (1 + RUSH_SURCHARGE) : total, 10000);
 };
 
-// Colombian format in both languages: "$1.250.000 COP"
-export const formatCop = (value) => `$${value.toLocaleString("es-CO")} COP`;
+// Prices are kept in COP. With the US flag (English) they're shown in dollars at this fixed rate;
+// the quote that reaches the email is always sent in COP.
+export const COP_PER_USD = 4000;
 
-// Short form for the option chips: "$500 mil" / "$500K", "$1,2 M" / "$1.2M"
-export const formatCopShort = (value, language) => {
-    if (value >= 1000000) {
-        const millions = (value / 1000000).toLocaleString(language === "es" ? "es-CO" : "en-US", { maximumFractionDigits: 1 });
-        return language === "es" ? `$${millions} M` : `$${millions}M`;
+const toUsd = (value, step) => Math.max(step, roundTo(value / COP_PER_USD, step));
+
+// "$1.250.000 COP" in Spanish, "$310 USD" in English
+export const formatMoney = (value, language) =>
+    language === "en"
+        ? `$${toUsd(value, 10).toLocaleString("en-US")} USD`
+        : `$${value.toLocaleString("es-CO")} COP`;
+
+// Short form for the option chips: "$500 mil" / "$1,2 M" in Spanish, "$125" / "$1.2K" in English
+export const formatMoneyShort = (value, language) => {
+    if (language === "en") {
+        const usd = toUsd(value, 5);
+        return usd >= 1000 ? `$${(usd / 1000).toLocaleString("en-US", { maximumFractionDigits: 1 })}K` : `$${usd}`;
     }
-    const thousands = Math.round(value / 1000);
-    return language === "es" ? `$${thousands} mil` : `$${thousands}K`;
+    if (value >= 1000000) {
+        const millions = (value / 1000000).toLocaleString("es-CO", { maximumFractionDigits: 1 });
+        return `$${millions} M`;
+    }
+    return `$${Math.round(value / 1000)} mil`;
 };

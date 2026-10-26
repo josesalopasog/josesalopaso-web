@@ -5,12 +5,12 @@ import { Reveal, RevealText } from "../../components/Reveal";
 import MailCard from "./MailCard";
 import QuoteCard from "./QuoteCard";
 import SocialLinks from "./SocialLinks";
-import { PROJECT_TYPES, estimateQuote, formatCop } from "./quoteConfig";
+import { PROJECT_TYPES, estimateQuote, formatMoney } from "./quoteConfig";
 import heroSky from "../../assets/images/hero-sky.webp";
 import "./styles.css";
 
 const Contact = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const contactRef = useRef(null);
     const nameRef = useRef(null);
     const { scrollYProgress } = useScroll({ target: contactRef, offset: ["start end", "end start"] });
@@ -25,7 +25,8 @@ const Contact = () => {
 
     const type = PROJECT_TYPES.find((item) => item.id === typeId);
     const total = estimateQuote(type, selected, rush);
-    const money = formatCop;
+    // Shown in COP (Spanish) or USD (English); `total` itself always stays in COP
+    const money = (value) => formatMoney(value, i18n.language);
     const typeLabel = t(`contact.quote.types.${typeId}.name`);
 
     const quote = isQuoteAttached
@@ -57,7 +58,7 @@ const Contact = () => {
 
     return (
         <section ref={contactRef} className="section contact" id="contact">
-            <motion.img
+            <motion.img decoding="async"
                 src={heroSky}
                 alt=""
                 loading="lazy"
