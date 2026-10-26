@@ -1,14 +1,17 @@
 <!doctype html>
-<html lang="en" class="dark">
+<!-- Spanish by default (the site switches to English with its own ES/EN button). translate="no": browser
+     auto-translation would translate the hero name letter by letter ("JOSMI SALOPAGASO") and fight React. -->
+<html lang="es" translate="no" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/cyberjs-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
     <meta name="theme-color" content="#05050f" />
 
-    <!-- Basic SEO (title + description are swapped to Spanish at runtime when the visitor picks ES) -->
-    <title>José Salopaso | Fullstack Web Developer in Bogotá (MERN)</title>
-    <meta name="description" content="Fullstack web developer in Bogotá building fast websites, landing pages and web apps with React, Node.js and MongoDB. Get an instant quote and a reply in 24–48 h." />
+    <!-- Basic SEO, in Spanish (the default language; title + description switch to English at runtime when the visitor picks EN) -->
+    <title>José Salopaso | Desarrollador Web Fullstack en Bogotá</title>
+    <meta name="description" content="Desarrollador web fullstack en Bogotá: sitios rápidos, landing pages y aplicaciones web con React, Node.js y MongoDB. Cotiza al instante y te respondo en 24–48 h." />
     <meta name="keywords" content="José Salopaso, fullstack web developer, desarrollador web fullstack, freelance web developer Bogotá, desarrollador web Bogotá, MERN, React, Node.js, MongoDB, Express, landing page, portafolio, sistemas de gestión" />
     <meta name="author" content="José Salopaso" />
     <meta name="robots" content="index, follow" />
@@ -16,18 +19,21 @@
     <!-- Open Graph (Facebook, LinkedIn, WhatsApp...) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="José Salopaso" />
-    <meta property="og:title" content="José Salopaso | Fullstack Web Developer in Bogotá" />
-    <meta property="og:description" content="Websites, landing pages and web apps with React, Node.js and MongoDB. Get an instant quote and a reply in 24–48 h." />
-    <meta property="og:image" content="https://josesalopaso.com/preview.webp" />
+    <meta property="og:title" content="José Salopaso | Desarrollador Web Fullstack en Bogotá" />
+    <meta property="og:description" content="Sitios web, landing pages y aplicaciones web con React, Node.js y MongoDB. Cotiza al instante y te respondo en 24–48 h." />
+    <meta property="og:image" content="https://josesalopaso.com/preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Portada de josesalopaso.com: José Salopaso frente a un atardecer con palmeras" />
     <meta property="og:url" content="https://josesalopaso.com" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="es_CO" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:locale:alternate" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="José Salopaso | Fullstack Web Developer in Bogotá" />
-    <meta name="twitter:description" content="Websites, landing pages and web apps with React, Node.js and MongoDB. Instant quote, reply in 24–48 h." />
-    <meta name="twitter:image" content="https://josesalopaso.com/preview.webp" />
+    <meta name="twitter:title" content="José Salopaso | Desarrollador Web Fullstack en Bogotá" />
+    <meta name="twitter:description" content="Sitios web, landing pages y aplicaciones web con React, Node.js y MongoDB. Cotiza al instante y te respondo en 24–48 h." />
+    <meta name="twitter:image" content="https://josesalopaso.com/preview.jpg" />
     <meta name="twitter:creator" content="@josesalopaso" />
 
     <!-- Canonical -->
@@ -40,7 +46,7 @@
         "@type": "Person",
         "name": "José Salopaso",
         "url": "https://josesalopaso.com",
-        "image": "https://josesalopaso.com/preview.webp",
+        "image": "https://josesalopaso.com/preview.jpg",
         "jobTitle": "Fullstack Web Developer",
         "description": "Fullstack web developer and electronic engineer in Bogotá building websites, landing pages and web apps with the MERN stack.",
         "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" },
